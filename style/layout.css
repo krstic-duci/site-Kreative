@@ -16,7 +16,9 @@ font-family: 'Montserrat', sans-serif;*/
 	width: 100%;
 }
 
-
+.divs-wrapper {
+	background-color: #ccc;
+}
 /*===   End of MAIN CONTENT comment block  ===*/
 
 
