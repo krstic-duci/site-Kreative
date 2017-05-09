@@ -1,3 +1,31 @@
-body {
-	
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;*/
+/*=============================================
+     =            HEADER & NAV           =
+=============================================*/
+
+
+
+/*===  End of HEADER & NAV comment block  ===*/
+
+
+/*=============================================
+     =            MAIN CONTENT           =
+=============================================*/
+.img-carousel {
+	width: 100%;
+	background-size: cover;
 }
+
+
+/*===   End of MAIN CONTENT comment block  ===*/
+
+
+
+/*=============================================
+      =            FOOTER           =
+=============================================*/
+
+
+
+/*=====  End of FOOTER  comment block  =====*/
