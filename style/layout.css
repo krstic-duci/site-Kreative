@@ -1,18 +1,44 @@
 /*font-family: 'Open Sans', sans-serif;
 font-family: 'Montserrat', sans-serif;*/
-
 /**
 
 	TODO:
 	- line 32 I cutted img with overflow: hidden;
-
+	- proper image resize on all resolution
+	- how to remove class on li.active elem when something else is clicked in nav
+	- fix left & right carousel change btn
+	- 
  */
+ body {
+ 	position: relative;
+ }
 /*=============================================
      =            HEADER & NAV           =
 =============================================*/
-
-
-
+nav.navbar {
+	opacity: 0.8;
+	margin-bottom: 0;
+	border: 0;
+}
+ul.nav.navbar-nav li a,
+ul.nav.navbar-nav .active-elem a:hover {
+	color: #fff;
+}
+ul.nav.navbar-nav li a:hover {
+	color: #11ABB0;
+	transition: color 0.15s ease-in-out;
+	-moz-transition: color 0.15s ease-in-out;
+	-webkit-transition: color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out;
+	-ms-transition: color 0.15s ease-in-out;	
+}
+li.active-elem,
+ul.nav.navbar-nav .active a,
+.navbar-inverse div div div .navbar-nav>.active>a, 
+.navbar-inverse div div div .navbar-nav>.active>a:focus, 
+.navbar-inverse div div div .navbar-nav>.active>a:hover {
+	background-color: #0f9095;
+}
 /*===  End of HEADER & NAV comment block  ===*/
 
 
@@ -22,6 +48,29 @@ font-family: 'Montserrat', sans-serif;*/
 .img-carousel {
 	width: 100%;
 }
+.blue-words {
+	color: #11ABB0;
+}
+div.carousel-caption h2>a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.carousel-control.left,
+.carousel-control.right {
+	background-image: none;
+    background-repeat: no-repeat;
+}
+.carousel-control {
+	
+}
+
+
+
+
+
+
+
+
 
 .divs-wrapper {
 	background-color: #ccc;
@@ -34,8 +83,13 @@ font-family: 'Montserrat', sans-serif;*/
 .journal-wrapper {
 	background-color: #0f9095;
 }
+
 #map {
 	height: 400px;
+}
+
+.bottom-footer {
+	background-color: #ccc;
 }
 /*===   End of MAIN CONTENT comment block  ===*/
 

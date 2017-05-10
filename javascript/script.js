@@ -11,6 +11,9 @@
 
 $(function () {
 
+	/*----------  for smooth scrolling  ----------*/
+	smoothScroolOnClick();
+
 	/*----------  for loading Google geolocation  ----------*/
 	loadGeoLocation();
 
@@ -31,7 +34,7 @@ $(function () {
 			/*----------  put About Us second para on new lines ----------*/
 			$('.custom-col-sm-3').removeClass('col-sm-9').addClass('col-sm-12');
 
-			/*----------  put About Us coulmn para on new lines ----------*/
+			/*----------  put About Us column para on new lines ----------*/
 			$('.custom-col-sm-4').removeClass('col-sm-3').addClass('col-sm-6');
 		} else {
 
@@ -43,7 +46,6 @@ $(function () {
 		}
 	});
 });
-
 function modalLoader () {
 
 	$('.pic-wrapper').on('click', 'img', function(){
@@ -75,4 +77,29 @@ function loadGeoLocation () {
   		// Disabling mouse wheel scroll zooming
   		Gmap.map.setOptions({ scrollwheel: false });
 	}
+}
+
+function smoothScroolOnClick () {
+	$('a[href*="#"]').click(function(event) {
+
+    	// On-page links
+    	if (location.pathname.replace(/^\//, '') == 
+    		this.pathname.replace(/^\//, '') && location.hostname == 
+    		this.hostname) {
+
+      		// Figure out element to scroll to
+      		var target = $(this.hash);
+      		target = target.length ? target : 
+      		$('[name=' + this.hash.slice(1) + ']');
+
+      		// Does a scroll target exist?
+      		if (target.length) {
+        		// Only prevent default if animation is actually gonna happen
+        		event.preventDefault();
+        		$('html, body').animate({
+        		 	scrollTop: target.offset().top
+        		}, 300);
+      		}
+    	}
+  	});
 }

@@ -3,7 +3,8 @@
 	TODO:
 	- proper screen resize on divs wrapper when screen <= 836px
 	- remove jump on  viewport when screen size is <= 991px
-	- proper navbar resize when viewport is <= 767px and proper alignment (look at site example)
+	- proper navbar resize when viewport is <= 767px and proper alignment 
+	(look at site example)
 	- at section journal wrapper add proper href tag
 
  -->
@@ -13,8 +14,6 @@
 <head>  
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	
 
     <!-- for non-zoooming mode -->
 	<meta name="viewport" content="width=device-width, initial-scale=1,
@@ -36,10 +35,11 @@
 
 	<title>Kreative</title> 
 </head>  
-<body>
+<body data-spy="scroll" data-target="#main-navbar">
 
 	<!-- logo img and navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" 
+	id="main-navbar">
 
   		<div class="container">
 
@@ -62,23 +62,24 @@
     			<!-- navbar -->
     			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     			  	<ul class="nav navbar-nav">
-    			  	  	<li><a href="#">Home</a></li>
-    			  	  	<li><a href="#">Services</a></li>
-    			  	  	<li><a href="#">Portfolio</a></li>
-    			  	  	<li><a href="#">Journal</a></li>
-    			  	  	<li><a href="#">About Us</a></li>
-    			  	  	<li><a href="#">Contact</a></li>
+    			  	  	<li class="active-elem"><a href="#top-page">Home</a></li>
+    			  	  	<li><a href="#divs-wrapper">Services</a></li>
+    			  	  	<li><a href="#pic-wrapper">Portfolio</a></li>
+    			  	  	<li><a href="#journal-wrapper">Journal</a></li>
+    			  	  	<li><a href="#about-us-wrapper">About Us</a></li>
+    			  	  	<li><a href="#contact-wrapper">Contact</a></li>
     			  	</ul>
     			</div><!-- /div.navbar-collapse -->
 			</div><!-- /div.row- -->
   		</div><!-- /div.container- -->
 	</nav>
+	<!-- END logo img and navbar -->
 
-	<div class="container-fluid">
+	<!-- Carousel for pics -->
+	<div class="container-fluid" id="top-page">
 
 		<div class="row">
 
-			<!-- Carousel for pics -->
 			<div id="carousel-example-generic" data-ride="carousel"
 			class="carousel slide pictures-carousel">
 	
@@ -86,7 +87,8 @@
   				<div class="carousel-inner" role="listbox">
   				  	<div class="item active">
   				  	  	<img src="./images/post-image/post-image-a-972x360.jpg" 
-  				  	  	alt="lion-statue-stone" class="img-responsive img-carousel">
+  				  	  	alt="lion-statue-stone" class="img-responsive 
+  				  	  	img-carousel">
   				  	  	<div class="carousel-caption">
   				  	  		<h2>
   				  	  			Hello, we are <span class="blue-words">
@@ -106,9 +108,13 @@
   				  	  	alt="wheat-on-wind" class="img-responsive img-carousel">
   				  	  	<div class="carousel-caption">
   				  	  		<h2>
-  				  	  			Take a look at some of <span class="blue-words">
-  				  	  			our works</span> or <span class="blue-words">
-  				  	  			get in touch</span> to discuss how we can help you.
+  				  	  			Take a look at some of 
+  				  	  			<a href="#pic-wrapper">
+  				  	  				<span class="blue-words">our works</span>
+  				  	  			</a> or
+  				  	  			<a href="#about-us-wrapper">
+  				  	  				<span class="blue-words">get in touch</span>
+  				  	  			</a> to discuss how we can help you.
   				  	  		</h2>
   				  	  		<p>
   				  	  			At vero eos et accusamus et iusto odio 
@@ -119,10 +125,14 @@
   				  	</div>
   				  	<div class="item">
   				  	  	<img src="./images/post-image/post-image-c-972x360.jpg" 
-  				  	  	alt="guy-lying-on-meadow" class="img-responsive img-carousel">
+  				  	  	alt="guy-lying-on-meadow" class="img-responsive 
+  				  	  	img-carousel">
   				  	  	<div class="carousel-caption">
   				  	  		<h2>
-  				  	  			You must love <span class="blue-words">design</span>
+  				  	  			You must love 
+  				  	  			<span class="blue-words">
+  				  	  				design
+  				  	  			</span>
   				  	  		</h2>
   				  	  		<p>
   				  	  			Lorem ipsum dolor sit amet, consectetur 
@@ -148,9 +158,11 @@
 			</div><!-- /div.carousel -->
 		</div><!-- /div.row -->
 	</div><!-- /div.container-fluid -->
+	<!-- END Carousel for pics -->
 
+	
 	<!-- first section -->
-	<section class="divs-wrapper">
+	<section class="divs-wrapper" id="divs-wrapper">
 		
 		<div class="container">
 			
@@ -161,11 +173,13 @@
 					<p>Our list of awesome services.</p>
 				</div>
 				<div class="col-md-8">
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus 
-					qui blanditiis praesentium voluptatum deleniti atque corrupti
-					quos dolores et quas molestias excepturi sint occaecati 
-					cupiditate. At vero eos et accusamus et iusto odio 
-					dignissimos ducimus qui blanditiis praesentium.</p>
+					<p>
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corruptiquos dolores et quas molestias excepturi 
+						sint occaecati cupiditate. At vero eos et accusamus et 
+						iusto odio dignissimos ducimus qui blanditiis praesentium.
+					</p>
 				</div>
 			</div><!-- /div.row -->
 
@@ -175,30 +189,30 @@
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-desktop" aria-hidden="true"> WEBDESIGN</i>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus 
-						qui blanditiis praesentium voluptatum deleniti atque 
-						corrupti quos dolores et quas molestias excepturi sint 
-						occaecati cupiditate. At vero eos et accusamus et 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-star" aria-hidden="true"> BRANDING</i>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus 
-						qui blanditiis praesentium voluptatum deleniti atque 
-						corrupti quos dolores et quas molestias excepturi sint 
-						occaecati cupiditate. At vero eos et accusamus et 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-camera" aria-hidden="true"> PHOTOGRAPHY</i>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus 
-						qui blanditiis praesentium voluptatum deleniti atque 
-						corrupti quos dolores et quas molestias excepturi sint 
-						occaecati cupiditate. At vero eos et accusamus et 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
@@ -206,39 +220,40 @@
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-globe" aria-hidden="true"> WEB DEVELOPMENT</i>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus 
-						qui blanditiis praesentium voluptatum deleniti atque 
-						corrupti quos dolores et quas molestias excepturi sint 
-						occaecati cupiditate. At vero eos et accusamus et 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-table" aria-hidden="true"> USER INTERFACE</i>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus 
-						qui blanditiis praesentium voluptatum deleniti atque 
-						corrupti quos dolores et quas molestias excepturi sint 
-						occaecati cupiditate. At vero eos et accusamus et 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-print" aria-hidden="true"> PRINTING</i>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus 
-						qui blanditiis praesentium voluptatum deleniti atque 
-						corrupti quos dolores et quas molestias excepturi sint 
-						occaecati cupiditate. At vero eos et accusamus et 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.divs-wrapper -->
+	<!-- END first section -->
 
 	<!-- second section -->
-	<section class="pic-wrapper">
+	<section class="pic-wrapper" id="pic-wrapper">
 
 		<div class="container">
 			
@@ -344,7 +359,8 @@
 					<!-- Link trigger modal -->
 					<a href="#" data-toggle="modal" data-target="#myModal">
 						<figure>
-							<img src="./images/portfolio/fields.jpg" alt="wheat-on-wind">
+							<img src="./images/portfolio/fields.jpg" 
+							alt="wheat-on-wind">
 						</figure>
 						<figcaption>Fields</figcaption>
 					</a>
@@ -377,9 +393,10 @@
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.pics-wrapper -->
+	<!-- END second section -->
 	
 	<!-- third section -->
-	<section class="journal-wrapper">
+	<section class="journal-wrapper" id="journal-wrapper">
 		
 		<div class="container">
 	
@@ -417,9 +434,11 @@
 
 				<!-- user two post -->
 				<div class="col-sm-10">
-					<img src="./images/user-02.png" alt="portfolio picture woman" class="img-circle">
+					<img src="./images/user-02.png" alt="portfolio picture woman" 
+					class="img-circle">
 					<a href="#">
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed.
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+						aut odit aut fugit sed.
 					</a>
 				</div>
 				<div class="col-sm-2">
@@ -441,9 +460,11 @@
 
 				<!-- user three post -->
 				<div class="col-sm-10">
-					<img src="./images/user-03.png" alt="portfolio picture man" class="img-circle">
+					<img src="./images/user-03.png" alt="portfolio picture man" 
+					class="img-circle">
 					<a href="#">
-						Quis autem vel esse eum iure reprehenderit qui in ea voluptate velit esse.
+						Quis autem vel esse eum iure reprehenderit qui in ea 
+						voluptate velit esse.
 					</a>
 				</div>
 				<div class="col-sm-2">
@@ -465,9 +486,10 @@
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.journal-wrapper -->
+	<!-- END third section -->
 
 	<!-- fourth section -->
-	<section class="about-us-wrapper">
+	<section class="about-us-wrapper" id="about-us-wrapper">
 		
 		<div class="container">
 
@@ -671,18 +693,19 @@
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.about-us-wrapper -->
+	<!-- END fourth section -->
 
 	<!-- for loading gmaps.js -->
 	<div class="container-fluid">
 		<div class="row">
 			<div id="map"></div>
 		</div>
-		
 	</div>
 	
+	<!-- footer on page -->
 	<footer>
 
-		<div class="container">
+		<div class="container" id="contact-wrapper">
 
 			<div class="row">
 
@@ -753,11 +776,46 @@
 				</div>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-		
-		<div></div>
+
+		<!-- bottom footer -->
+		<div class="bottom-footer">
+
+			<div class="container">
+
+				<div class="row">
+	
+					<div class="col-sm-6">
+						<p>
+							Copyright © 2045 Kreative<span> | </span> Design by 
+							<a href="http://www.styleshout.com/">Styleshout</a>
+						</p>
+					</div>
+					<div class="col-sm-6">
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-google-plus-square" 
+							aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-skype" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-rss-square" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div><!-- /div.row -->
+			</div><!-- /div.container -->
+		</div><!-- /div.bootom-footer -->
 	</footer>
-
-
+	<!-- END footer on page -->
 
 	<!-- JQ -->
 	<script src="./libs/jq/jquery-3.2.1.min.js"></script>
