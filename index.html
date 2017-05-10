@@ -1,3 +1,13 @@
+<!--
+
+	TODO:
+	- proper screen resize on divs wrapper when screen <= 836px
+	- remove jump on  viewport when screen size is <= 991px
+	- proper navbar resize when viewport is <= 767px and proper alignment (look at site example)
+	- at section journal wrapper add proper href tag
+
+ -->
+
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -26,13 +36,13 @@
 </head>  
 <body>
 
+	<!-- logo img and navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 
   		<div class="container">
 
 			<div class="row">
 
-    			<!-- Brand and toggle get grouped for better mobile display -->
     			<div class="navbar-header">
     			  	<button type="button" class="navbar-toggle collapsed" 
     			  	data-toggle="collapse" aria-expanded="false"
@@ -41,12 +51,13 @@
     			  	  	<span class="icon-bar"></span>
     			  	  	<span class="icon-bar"></span>
     			  	</button>
+    			  	<!-- logo img -->
     			  	<a class="navbar-brand" href="#">
     			  		<img src="./images/logo.png" alt="logo-img-kreative">
     			  	</a>
     			</div>
 
-    			<!-- Collect the nav links, forms, and other content for toggling -->
+    			<!-- navbar -->
     			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     			  	<ul class="nav navbar-nav">
     			  	  	<li><a href="#">Home</a></li>
@@ -119,7 +130,7 @@
   				  	  		</p>
   				  	  	</div>
   				  	</div>
-  				</div>
+  				</div><!-- /div.carousel-inner -->
 				
   				<!-- Controls Carousel-->
   				<a class="left carousel-control" href="#carousel-example-generic" 
@@ -132,18 +143,17 @@
   				  	<img src="./images/direction-nav-right.png" 
   				  	alt="right-direction-arrow">
   				</a>
-
 			</div><!-- /div.carousel -->
 		</div><!-- /div.row -->
 	</div><!-- /div.container-fluid -->
 
 	<!-- first section -->
-	<div class="divs-wrapper">
+	<section class="divs-wrapper">
 		
 		<div class="container">
 			
 			<div class="row">
-				
+
 				<div class="col-md-4 col-sm-12">
 					<h3>Services</h3>
 					<p>Our list of awesome services.</p>
@@ -158,9 +168,9 @@
 			</div><!-- /div.row -->
 
 			<div class="row">
-				<!-- first row -->
-				<div class="custom-col-sm col-sm-4">
 
+				<!-- first row -->
+				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-desktop" aria-hidden="true"> WEBDESIGN</i>
 					<p>
 						At vero eos et accusamus et iusto odio dignissimos ducimus 
@@ -169,11 +179,8 @@
 						occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
-
 				</div>
-
-				<div class="custom-col-sm col-sm-4">
-
+				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-star" aria-hidden="true"> BRANDING</i>
 					<p>
 						At vero eos et accusamus et iusto odio dignissimos ducimus 
@@ -182,11 +189,8 @@
 						occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
-
 				</div>
-
-				<div class="custom-col-sm col-sm-4">
-
+				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-camera" aria-hidden="true"> PHOTOGRAPHY</i>
 					<p>
 						At vero eos et accusamus et iusto odio dignissimos ducimus 
@@ -195,11 +199,9 @@
 						occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
-
 				</div>
 				<!-- second row -->
-				<div class="custom-col-sm col-sm-4">
-
+				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-globe" aria-hidden="true"> WEB DEVELOPMENT</i>
 					<p>
 						At vero eos et accusamus et iusto odio dignissimos ducimus 
@@ -208,11 +210,8 @@
 						occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
-
 				</div>
-
-				<div class="custom-col-sm col-sm-4">
-
+				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-table" aria-hidden="true"> USER INTERFACE</i>
 					<p>
 						At vero eos et accusamus et iusto odio dignissimos ducimus 
@@ -221,10 +220,8 @@
 						occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
-
 				</div>
-				<div class="custom-col-sm col-sm-4">
-
+				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-print" aria-hidden="true"> PRINTING</i>
 					<p>
 						At vero eos et accusamus et iusto odio dignissimos ducimus 
@@ -233,34 +230,381 @@
 						occaecati cupiditate. At vero eos et accusamus et 
 						molestias iusto odio dignissimos.
 					</p>
-
 				</div>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</div><!-- /div.divs-wrapper -->
+	</section><!-- /section.divs-wrapper -->
 
 	<!-- second section -->
-	<div class="pic-wrapper">
+	<section class="pic-wrapper">
 
 		<div class="container">
+			
+			<div class="row">
+				
+				<div class="col-sm-12">
+					<h3>Portfolio</h3>
+					<p>Check out our latest projects.</p>
+				</div>
 
+				<div class="col-sm-12">
+					<p>
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum deleniti 
+						atque corrupti quos dolores et quas molestias excepturi
+						sint occaecati cupiditate. At vero eos et accusamus et 
+						iusto odio dignissimos ducimus qui blanditiis praesentium.
+					</p>
+				</div>
+				
+				<!-- first row of pictures -->
+				<div class="col-md-3 col-sm-3 custom-col-sm-2 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/cosmic-sneakers.jpg" alt="cosmic sneakers">
+						</figure>
+						<figcaption>Cosmic Sneakers</figcaption>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/milk-splash.jpg" alt="milk splash from glass">
+						</figure>
+						<figcaption>Milk Splash</figcaption>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/eve.jpg" alt="photo of blonde woman">
+						</figure>
+						<figcaption>Eve</figcaption>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/sneaker-splash.jpg" alt="sneaker and colors">
+						</figure>
+						<figcaption>Sneaker Splash</figcaption>
+					</a>
+				</div>
 
+				<!-- second row of pictures -->
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/judah.jpg" alt="Lion Statue">
+						</figure>
+						<figcaption>Judah</figcaption>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/vector-flower.jpg" alt="color changing">
+						</figure>
+						<figcaption>Vector Flower</figcaption>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/clock.jpg" alt="old table clock">
+						</figure>
+						<figcaption>Clock</figcaption>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-2">
+					
+					<!-- Link trigger modal -->
+					<a href="#" data-toggle="modal" data-target="#myModal">
+						<figure>
+							<img src="./images/portfolio/fields.jpg" alt="wheat-on-wind">
+						</figure>
+						<figcaption>Fields</figcaption>
+					</a>
+				</div>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
+				  	<div class="modal-dialog" role="document">
 
+				  	  	<div class="modal-content">
 
+							<!-- call JQ for modal -->
+				  	  	  	<div class="modal-body change-pic-in-modal">
+	
+				  	  	  	</div>
 
-
-
-
-
-
-
-
-
-
-
+				  	  	  	<div class="modal-footer">
+				  	  	  		<a href="#">
+				  	  	    	 	Details
+				  	  	  		</a>
+				  	  	    	<a href="#" data-dismiss="modal">
+				  	  	    	 	Close
+				  	  	  		</a>
+				  	  	  </div>
+				  	  	</div><!-- /div.modal-content -->
+				  	</div><!-- /div.modal-dialog -->
+				</div><!-- /div.modal fade -->
+			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</div><!-- /div.divs-wrapper -->
+	</section><!-- /section.pics-wrapper -->
+	
+	<section class="journal-wrapper">
+		
+		<div class="container">
+	
+			<div class="row">
+				
+				<div class="col-sm-12">
+					<h3>Journal</h3>
+					<p>Our latest posts and rants.</p>
+				</div>
+
+				<!-- user one post -->
+				<div class="col-sm-10">
+					<img src="./images/user-03.png" alt="portfolio picture man" class="img-circle">
+					<a href="#">
+						Proin gravida nibh vel velit auctor aliquet Aenean sollicitudin auctor.
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<p>
+						AUG 19, 2045 <br>
+						By Sakura Haruno
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<p>
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. <a href="#">Read More ></a>
+					</p>
+				</div>
+
+				<!-- user two post -->
+				<div class="col-sm-10">
+					<img src="./images/user-02.png" alt="portfolio picture woman" class="img-circle">
+					<a href="#">
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed.
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<p>
+						AUG 9, 2045 <br>
+						By Jane Doe
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<p>
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. <a href="#">Read More ></a>
+					</p>
+				</div>
+
+				<!-- user three post -->
+				<div class="col-sm-10">
+					<img src="./images/user-03.png" alt="portfolio picture man" class="img-circle">
+					<a href="#">
+						Quis autem vel esse eum iure reprehenderit qui in ea voluptate velit esse.
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<p>
+						AUG 7, 2045 <br>
+						By Naruto Uzumaki
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<p>
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. <a href="#">Read More ></a>
+					</p>
+				</div>
+			</div><!-- /div.row -->
+		</div><!-- /div.container -->
+	</section><!-- /section.journal-wrapper -->
+
+	<section class="about-us-wrapper">
+		
+		<div class="container">
+
+			<div class="row">
+				
+				<!-- about us section -->
+				<div class="col-sm-3">
+					<h3>About Us</h3>
+					<p>This is what we are.</p>
+				</div>
+				<div class="col-sm-9 custom-col-sm-3">
+					<p>
+						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+					</p>
+				</div>
+				<!-- our work process section -->
+				<div class="col-sm-12">
+					<h4>Our Work Process.</h4>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-4">
+					<p>EXPLORE.</p>
+					<p>
+						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-4">
+					<p>DESIGN.</p>
+					<p>
+						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-4">
+					<p>DEVELOP.</p>
+					<p>
+						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3 custom-col-sm-4">
+					<p>DELIVER.</p>
+					<p>
+						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+					</p>
+				</div>
+
+				<!-- meet the team section -->
+				<div class="col-sm-12">
+					<h4>Meet The Team.</h4>
+				</div>
+				<div class="col-sm-3">
+					
+					<img src="./images/team/team-img-01.jpg" alt="man with tie">
+					<p>Naruto Uzumaki</p>
+					<p>Director</p>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-skype" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					
+					<img src="./images/team/team-img-02.jpg" alt="woman">
+					<p>Sakura Haruno</p>
+					<p>Financial Director</p>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-skype" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					
+					<img src="./images/team/team-img-03.jpg" alt="man">
+					<p>Sasuke Uchiha</p>
+					<p>Senior Web Designer</p>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-skype" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					
+					<img src="./images/team/team-img-03.jpg" alt="man">
+					<p>Shikamaru Nara</p>
+					<p>Web Designer</p>
+					<a href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-skype" aria-hidden="true"></i>
+					</a>
+				</div>
+				
+				<!-- testimonals section -->
+				<div class="col-sm-12">
+					<h4>Testimonials</h4>
+					<p>What out clients are saying.</p>
+				</div>
+
+				<div class="col-sm-6">
+					<img class="img-circle" src="./images/client-img.png" alt="portfolio img rounded">
+					<span>John Doe</span>
+					<span>Designer</span>
+
+					<p>
+						Phasellus - ut augue at sapien bibendum bibendum amet magna. Aenean condimentum, lacus sit amet luctus lobortis, enim tellus ultrices elit, amet consequat enim elit noneas.
+					</p>
+				</div>
+				<div class="col-sm-6">
+					<img class="img-circle" src="./images/client-img.png" alt="portfolio img rounded">
+					<p>Michael Smith</p>
+					<p>CEO</p>
+					<p>
+						Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie acus duis in dictumst non integer. Elit, sed scelerisque odio tortor, sed platea dis. Aenean condimentum, lacus sit amet luctus lobortis, enim tellus ultrices elit.
+					</p>
+				</div>
+
+			
+
+
+
+			</div><!-- /div.row -->
+		</div><!-- /div.container -->
+	</section><!-- /section.about-us-wrapper -->
+
 	<!-- JQ -->
 	<script src="./libs/jq/jquery-3.2.1.min.js"></script>
 	
@@ -271,3 +615,10 @@
 	<script src="./javascript/script.js"></script>
 </body>  
 </html>
+
+				<!-- Button trigger modal -->
+				<!-- <button type="button" class="btn btn-primary btn-lg" 
+				data-toggle="modal" data-target="#myModal">
+  					Launch demo modal
+				</button>-->
+				

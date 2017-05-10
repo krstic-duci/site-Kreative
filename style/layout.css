@@ -1,5 +1,13 @@
 /*font-family: 'Open Sans', sans-serif;
 font-family: 'Montserrat', sans-serif;*/
+
+/**
+
+	TODO:
+	- line 32 I cutted img with overflow: hidden;
+	- 
+
+ */
 /*=============================================
      =            HEADER & NAV           =
 =============================================*/
@@ -18,6 +26,14 @@ font-family: 'Montserrat', sans-serif;*/
 
 .divs-wrapper {
 	background-color: #ccc;
+}
+
+.pic-wrapper, .about-us-wrapper {
+	overflow: hidden;
+}
+
+.journal-wrapper {
+	background-color: #0f9095;
 }
 /*===   End of MAIN CONTENT comment block  ===*/
 
