@@ -5,10 +5,14 @@
 	(napisao sam 819 jer je 836 trazena rezolucija, i ona je manja za 17px i tek
 	tada dobijam da se viewport menja tek na 836px)
 	- need to specify tags <h6>, <i>, <p> from line 51 up to 55
+	- add customize pins on gmaps.js
 
  */
 
 $(function () {
+
+	/*----------  for loading Google geolocation  ----------*/
+	loadGeoLocation();
 
 	/*----------  for loading modal pics  ----------*/
 	modalLoader();
@@ -37,7 +41,6 @@ $(function () {
 			$('.custom-col-sm-3').removeClass('col-sm-12').addClass('col-sm-9');
 			$('.custom-col-sm-4').removeClass('col-sm-6').addClass('col-sm-3');
 		}
-
 	});
 });
 
@@ -59,4 +62,17 @@ function modalLoader () {
 					' Branding, Web Design</i>'+
 				'</p>');
     });
+}
+function loadGeoLocation () {
+
+	var Gmap = new GMaps({
+  		div: '#map',
+  		lat: 14.553304,
+  		lng: 121.051657,
+  		zoom: 15
+	});
+    if(Gmap.map) {
+  		// Disabling mouse wheel scroll zooming
+  		Gmap.map.setOptions({ scrollwheel: false });
+	}
 }
