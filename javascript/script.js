@@ -1,15 +1,23 @@
 /**
 
 	TODO:
-	- proper screen resize on .custom-col-sm when screen <= 836px 
-	(napisao sam 819 jer je 836 trazena rezolucija, i ona je manja za 17px i tek
+	(napisao sam 819 na liniji 26 jer je 836 trazena rezolucija, 
+	i ona je manja za 17px i tek
 	tada dobijam da se viewport menja tek na 836px)
 	- need to specify tags <h6>, <i>, <p> from line 51 up to 55
 	- add customize pins on gmaps.js
+	- when scroll down or up with mouse through page ( must lose focus on nav li 
+	(home)) i.e. lose it's class
 
  */
 
+
 $(function () {
+
+	/*----------  remove class from nav li (home) active elem  ----------*/
+	$('.nav.navbar-nav li a').click(function() {
+		$('li.active-elem').removeClass();
+	});
 
 	/*----------  for smooth scrolling  ----------*/
 	smoothScroolOnClick();
@@ -103,3 +111,12 @@ function smoothScroolOnClick () {
     	}
   	});
 }
+/*----------  make carousel to work on kbd btn  ----------*/
+$(document).keydown(function(event) {
+	if (event.keyCode == '37') {
+   	   		$('.carousel-control .left').click();
+   		}
+   		else if (event.keyCode == '39') {
+   	   		$('.carousel-control .right').click();
+   		}
+});

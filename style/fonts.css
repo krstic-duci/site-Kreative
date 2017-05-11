@@ -1,0 +1,36 @@
+/** 
+ * Copyright 2017 Steve Matteson (https://twitter.com/@SteveMatteson1)
+ * Montserrat
+ ________________________________________________________________*/
+@font-face {
+font-family: 'Montserrat-Regular';
+src:
+    local('Montserrat-Regular'),
+    local('Montserrat-Regular'),
+    url('./fonts/montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+font-family: 'Montserrat-Bold';
+src:
+    local('Montserrat-Bold'),
+    local('Montserrat-Bold'),
+    url('./fonts/montserrat/Montserrat-Bold.ttf');
+}
+/**
+ * Copyright 2017 Julieta Ulanovsky (http://www.zkysky.com.ar/)
+ * Open Sans
+ ________________________________________________________________*/
+ @font-face {
+font-family: 'OpenSans-Regular';
+src:
+    local('OpenSans-Regular'),
+    local('OpenSans-Regular'),
+    url('./fonts/opensans/OpenSans-Regular.ttf');
+}
+ @font-face {
+font-family: 'OpenSans-Light';
+src:
+    local('OpenSans-Light'),
+    local('OpenSans-Light'),
+    url('./fonts/opensans/OpenSans-Light.ttf');
+}

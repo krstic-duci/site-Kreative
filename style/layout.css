@@ -1,24 +1,59 @@
-/*font-family: 'Open Sans', sans-serif;
-font-family: 'Montserrat', sans-serif;*/
 /**
-
 	TODO:
 	- line 32 I cutted img with overflow: hidden;
 	- proper image resize on all resolution
-	- how to remove class on li.active elem when something else is clicked in nav
+	- how to remove class on li.active elem when something else is clicked in 
+	nav menu
+	- proper navbar resize when viewport is <= 767px and proper alignment 
+	(look at site example)
 	- fix left & right carousel change btn
-	- 
+	- fix image look (need to be darker)
  */
+
+/*=============================================
+					Legend:
+1. general style
+2. header & nav
+3. main content
+	a: carousel pics
+	b: services section
+	c: image & modal section
+	d: journal section 
+	e: about us section
+		I:   our work process article
+		II:  meet the team article
+		III: testimonals article
+4. main footer
+=============================================*/
+
+
+/*=============================================
+1. GENERAL STYLE            
+=============================================*/
  body {
  	position: relative;
  }
+ /*____style div that holds gmaps____*/
+#map {
+	height: 400px;
+}
+
+
+/*=====  End of GENERAL STYLE  ======*/
+
+
 /*=============================================
-     =            HEADER & NAV           =
+2. HEADER & NAV
 =============================================*/
+.navbar-inverse {
+    background-color: #0b0b0b;
+    border-color: #080808;
+}
 nav.navbar {
-	opacity: 0.8;
-	margin-bottom: 0;
-	border: 0;
+	font-family: 'OpenSans-Regular', sans-serif;
+    opacity: 0.8;
+    margin-bottom: 0;
+    border: 0;
 }
 ul.nav.navbar-nav li a,
 ul.nav.navbar-nav .active-elem a:hover {
@@ -32,36 +67,40 @@ ul.nav.navbar-nav li a:hover {
 	-o-transition: color 0.15s ease-in-out;
 	-ms-transition: color 0.15s ease-in-out;	
 }
-li.active-elem,
-ul.nav.navbar-nav .active a,
-.navbar-inverse div div div .navbar-nav>.active>a, 
-.navbar-inverse div div div .navbar-nav>.active>a:focus, 
-.navbar-inverse div div div .navbar-nav>.active>a:hover {
+#bs-example-navbar-collapse-1 .navbar-nav>.active>a, 
+#bs-example-navbar-collapse-1 .navbar-nav>.active>a:focus, 
+#bs-example-navbar-collapse-1 .navbar-nav>.active>a:hover,
+li.active-elem, ul.nav.navbar-nav .active a {
 	background-color: #0f9095;
 }
 /*===  End of HEADER & NAV comment block  ===*/
 
 
 /*=============================================
-     =            MAIN CONTENT           =
+3. MAIN CONTENT
 =============================================*/
+
+/*-----------------------------  
+a: carousel pics  
+------------------------------*/
 .img-carousel {
 	width: 100%;
 }
 .blue-words {
 	color: #11ABB0;
 }
-div.carousel-caption h2>a {
+div.carousel-caption h1>a {
 	text-decoration: none;
 	cursor: pointer;
 }
-.carousel-control.left,
-.carousel-control.right {
-	background-image: none;
-    background-repeat: no-repeat;
+.carousel-caption h1 {
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 56px;
 }
-.carousel-control {
-	
+.carousel-caption p {
+	font-family: 'OpenSans-Light', sans-serif;
+	font-size: 17px;
+	color: #bfc4cc;
 }
 
 
@@ -70,35 +109,72 @@ div.carousel-caption h2>a {
 
 
 
-
-
+/*-----------------------------  
+b: services section  
+------------------------------*/
 .divs-wrapper {
 	background-color: #ccc;
 }
 
+
+
+
+
+
+
+/*-----------------------------  
+c: images & modal section  
+------------------------------*/
 .pic-wrapper, .about-us-wrapper {
 	overflow: hidden;
 }
 
+
+
+
+
+/*-----------------------------  
+d: journal section  
+------------------------------*/
 .journal-wrapper {
 	background-color: #0f9095;
 }
 
-#map {
-	height: 400px;
-}
 
-.bottom-footer {
-	background-color: #ccc;
-}
+
+
+
+
+
+
+/*-----------------------------  
+e: about us section  
+------------------------------*/
+
+
+
+
+
+/*____our work process article____*/
+
+/*________________________________*/
+
+/*______meet the team article_____*/
+
+/*________________________________*/
+
+/*______testimonals article_______*/
+
+/*________________________________*/
 /*===   End of MAIN CONTENT comment block  ===*/
 
 
-
 /*=============================================
-      =            FOOTER           =
+4. MAIN FOOTER
 =============================================*/
-
+.bottom-footer {
+	background-color: #ccc;
+}
 
 
 /*=====  End of FOOTER  comment block  =====*/

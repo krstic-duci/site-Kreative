@@ -1,10 +1,10 @@
 <!--
 
 	TODO:
-	- proper screen resize on divs wrapper when screen <= 836px
 	- remove jump on  viewport when screen size is <= 991px
-	- proper navbar resize when viewport is <= 767px and proper alignment 
-	(look at site example)
+	- proper navbar resize when viewport is <= 767px and proper alignment of 
+	elements (look at site example)
+	- how to set only one img in carousel and only text to move
 	- at section journal wrapper add proper href tag
 
  -->
@@ -19,6 +19,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,
 	maximum-scale=1, user-scalable=no"> 
 	
+	<!-- local fonts -->
+	<link rel="stylesheet" href="./style/fonts.css">
+
 	<!-- Local CSS file -->
 	<link rel="stylesheet" href="./style/layout.css">
 
@@ -29,10 +32,7 @@
 	<link rel="stylesheet" href="./libs/font-awesome-4.7.0/css/
 	font-awesome.min.css">
 
-	<!-- fonts from Google -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|
-	Open+Sans:300,400" rel="stylesheet">
-
+	
 	<title>Kreative</title> 
 </head>  
 <body data-spy="scroll" data-target="#main-navbar">
@@ -43,45 +43,42 @@
 
   		<div class="container">
 
-			<div class="row">
-
-    			<div class="navbar-header">
-    			  	<button type="button" class="navbar-toggle collapsed" 
-    			  	data-toggle="collapse" aria-expanded="false"
-    			  	data-target="#bs-example-navbar-collapse-1" >
-    			  	  	<span class="sr-only">Toggle navigation</span>
-    			  	  	<span class="icon-bar"></span>
-    			  	  	<span class="icon-bar"></span>
-    			  	</button>
-    			  	<!-- logo img -->
-    			  	<a class="navbar-brand" href="#">
-    			  		<img src="./images/logo.png" alt="logo-img-kreative">
-    			  	</a>
-    			</div>
-
-    			<!-- navbar -->
-    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    			  	<ul class="nav navbar-nav">
-    			  	  	<li class="active-elem"><a href="#top-page">Home</a></li>
-    			  	  	<li><a href="#divs-wrapper">Services</a></li>
-    			  	  	<li><a href="#pic-wrapper">Portfolio</a></li>
-    			  	  	<li><a href="#journal-wrapper">Journal</a></li>
-    			  	  	<li><a href="#about-us-wrapper">About Us</a></li>
-    			  	  	<li><a href="#contact-wrapper">Contact</a></li>
-    			  	</ul>
-    			</div><!-- /div.navbar-collapse -->
-			</div><!-- /div.row- -->
+    		<div class="navbar-header">
+    		  	<button type="button" class="navbar-toggle collapsed" 
+    		  	data-toggle="collapse" aria-expanded="false"
+    		  	data-target="#bs-example-navbar-collapse-1" >
+    		  	  	<span class="sr-only">Toggle navigation</span>
+    		  	  	<span class="icon-bar"></span>
+    		  	  	<span class="icon-bar"></span>
+    		  	</button>
+    		  	<!-- logo img -->
+    		  	<a class="navbar-brand" href="#">
+    		  		<img src="./images/logo.png" alt="logo-img-kreative">
+    		  	</a>
+    		</div>
+    		<!-- navbar -->
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    		  	<ul class="nav navbar-nav">
+    		  	  	<li class="active-elem"><a href="#top-page">Home</a></li>
+    		  	  	<li><a href="#divs-wrapper">Services</a></li>
+    		  	  	<li><a href="#pic-wrapper">Portfolio</a></li>
+    		  	  	<li><a href="#journal-wrapper">Journal</a></li>
+    		  	  	<li><a href="#about-us-wrapper">About Us</a></li>
+    		  	  	<li><a href="#contact-wrapper">Contact</a></li>
+    		  	</ul>
+    		</div><!-- /div.navbar-collapse -->
   		</div><!-- /div.container- -->
 	</nav>
 	<!-- END logo img and navbar -->
 
-	<!-- Carousel for pics -->
+	<!-- Carousel pics -->
 	<div class="container-fluid" id="top-page">
 
 		<div class="row">
 
 			<div id="carousel-example-generic" data-ride="carousel"
-			class="carousel slide pictures-carousel">
+			class="carousel slide" data-interval="false"
+			data-keyboard="true">
 	
   				<!-- Wrapper for slides -->
   				<div class="carousel-inner" role="listbox">
@@ -90,11 +87,11 @@
   				  	  	alt="lion-statue-stone" class="img-responsive 
   				  	  	img-carousel">
   				  	  	<div class="carousel-caption">
-  				  	  		<h2>
+  				  	  		<h1>
   				  	  			Hello, we are <span class="blue-words">
   				  	  			kreative</span>. We specialize in branding, 
   				  	  			websites and photography.
-  				  	  		</h2>
+  				  	  		</h1>
   				  	  		<p>
   				  	  			Aenean condimentum, lacus sit amet luctus 
   				  	  			lobortis, dolores et quas molestias excepturi 
@@ -107,7 +104,7 @@
   				  	  	<img src="./images/post-image/post-image-b-972x360.jpg" 
   				  	  	alt="wheat-on-wind" class="img-responsive img-carousel">
   				  	  	<div class="carousel-caption">
-  				  	  		<h2>
+  				  	  		<h1>
   				  	  			Take a look at some of 
   				  	  			<a href="#pic-wrapper">
   				  	  				<span class="blue-words">our works</span>
@@ -115,7 +112,7 @@
   				  	  			<a href="#about-us-wrapper">
   				  	  				<span class="blue-words">get in touch</span>
   				  	  			</a> to discuss how we can help you.
-  				  	  		</h2>
+  				  	  		</h1>
   				  	  		<p>
   				  	  			At vero eos et accusamus et iusto odio 
   				  	  			dignissimos ducimus qui blanditiis praesentium 
@@ -128,12 +125,12 @@
   				  	  	alt="guy-lying-on-meadow" class="img-responsive 
   				  	  	img-carousel">
   				  	  	<div class="carousel-caption">
-  				  	  		<h2>
+  				  	  		<h1>
   				  	  			You must love 
   				  	  			<span class="blue-words">
   				  	  				design
   				  	  			</span>
-  				  	  		</h2>
+  				  	  		</h1>
   				  	  		<p>
   				  	  			Lorem ipsum dolor sit amet, consectetur 
   				  	  			adipisicing elit. Animi, ad, recusandae! Debitis 
@@ -158,10 +155,10 @@
 			</div><!-- /div.carousel -->
 		</div><!-- /div.row -->
 	</div><!-- /div.container-fluid -->
-	<!-- END Carousel for pics -->
+	<!-- END Carousel pics -->
 
 	
-	<!-- first section -->
+	<!-- Services section -->
 	<section class="divs-wrapper" id="divs-wrapper">
 		
 		<div class="container">
@@ -250,9 +247,9 @@
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.divs-wrapper -->
-	<!-- END first section -->
+	<!-- END services section -->
 
-	<!-- second section -->
+	<!-- Image & Modal section -->
 	<section class="pic-wrapper" id="pic-wrapper">
 
 		<div class="container">
@@ -393,9 +390,9 @@
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.pics-wrapper -->
-	<!-- END second section -->
+	<!-- END image & modal section -->
 	
-	<!-- third section -->
+	<!-- Journal section  -->
 	<section class="journal-wrapper" id="journal-wrapper">
 		
 		<div class="container">
@@ -486,16 +483,15 @@
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.journal-wrapper -->
-	<!-- END third section -->
+	<!-- END journal section  -->
 
-	<!-- fourth section -->
+	<!-- About us section -->
 	<section class="about-us-wrapper" id="about-us-wrapper">
 		
 		<div class="container">
-
+			
 			<div class="row">
 				
-				<!-- about us section -->
 				<div class="col-sm-3">
 					<h3>About Us</h3>
 					<p>This is what we are.</p>
@@ -509,191 +505,200 @@
 						Morbi accumsan ipsum velit.
 					</p>
 				</div>
-				<!-- our work process section -->
-				<div class="col-sm-12">
-					<h4>Our Work Process.</h4>
-				</div>
-				<div class="col-md-3 col-sm-3 custom-col-sm-4">
-					<p>EXPLORE.</p>
-					<p>
-						Proin gravida nibh vel velit auctor aliquet. Aenean 
-						sollicitudin, lorem quis bibendum auctor, nisi elit 
-						consequat ipsum, nec sagittis sem nibh id elit. Duis sed
-						odio sit amet nibh vulputate cursus a sit amet mauris. 
-						Morbi accumsan ipsum velit.
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-3 custom-col-sm-4">
-					<p>DESIGN.</p>
-					<p>
-						Proin gravida nibh vel velit auctor aliquet. Aenean 
-						sollicitudin, lorem quis bibendum auctor, nisi elit 
-						consequat ipsum, nec sagittis sem nibh id elit. Duis sed
-						odio sit amet nibh vulputate cursus a sit amet mauris. 
-						Morbi accumsan ipsum velit.
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-3 custom-col-sm-4">
-					<p>DEVELOP.</p>
-					<p>
-						Proin gravida nibh vel velit auctor aliquet. Aenean 
-						sollicitudin, lorem quis bibendum auctor, nisi elit 
-						consequat ipsum, nec sagittis sem nibh id elit. Duis sed
-						odio sit amet nibh vulputate cursus a sit amet mauris. 
-						Morbi accumsan ipsum velit.
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-3 custom-col-sm-4">
-					<p>DELIVER.</p>
-					<p>
-						Proin gravida nibh vel velit auctor aliquet. Aenean 
-						sollicitudin, lorem quis bibendum auctor, nisi elit 
-						consequat ipsum, nec sagittis sem nibh id elit. Duis sed
-						odio sit amet nibh vulputate cursus a sit amet mauris. 
-						Morbi accumsan ipsum velit.
-					</p>
-				</div>
+				
+				<!-- our work process article -->
+				<article>
+					<div class="col-sm-12">
+						<h4>Our Work Process.</h4>
+					</div>
+					<div class="col-md-3 col-sm-3 custom-col-sm-4">
+						<p>EXPLORE.</p>
+						<p>
+							Proin gravida nibh vel velit auctor aliquet. Aenean 
+							sollicitudin, lorem quis bibendum auctor, nisi elit 
+							consequat ipsum, nec sagittis sem nibh id elit. Duis 
+							sedodio sit amet nibh vulputate cursus a sit amet 
+							mauris. Morbi accumsan ipsum velit.
+						</p>
+					</div>
+					<div class="col-md-3 col-sm-3 custom-col-sm-4">
+						<p>DESIGN.</p>
+						<p>
+							Proin gravida nibh vel velit auctor aliquet. Aenean 
+							sollicitudin, lorem quis bibendum auctor, nisi elit 
+							consequat ipsum, nec sagittis sem nibh id elit. Duis 
+							sedodio sit amet nibh vulputate cursus a sit amet 
+							mauris. Morbi accumsan ipsum velit.
+						</p>
+					</div>
+					<div class="col-md-3 col-sm-3 custom-col-sm-4">
+						<p>DEVELOP.</p>
+						<p>
+							Proin gravida nibh vel velit auctor aliquet. Aenean 
+							sollicitudin, lorem quis bibendum auctor, nisi elit 
+							consequat ipsum, nec sagittis sem nibh id elit. Duis 
+							sedodio sit amet nibh vulputate cursus a sit amet 
+							mauris. Morbi accumsan ipsum velit.
+						</p>
+					</div>
+					<div class="col-md-3 col-sm-3 custom-col-sm-4">
+						<p>DELIVER.</p>
+						<p>
+							Proin gravida nibh vel velit auctor aliquet. Aenean 
+							sollicitudin, lorem quis bibendum auctor, nisi elit 
+							consequat ipsum, nec sagittis sem nibh id elit. Duis 
+							sedodio sit amet nibh vulputate cursus a sit amet 
+							mauris. Morbi accumsan ipsum velit.
+						</p>
+					</div>
+				</article>
 
-				<!-- meet the team section -->
-				<div class="col-sm-12">
-					<h4>Meet The Team.</h4>
-				</div>
-				<div class="col-sm-3">
-					
-					<img src="./images/team/team-img-01.jpg" alt="man with tie">
-					<p>Naruto Uzumaki</p>
-					<p>Director</p>
-					<a href="#">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-google-plus-square" 
-						aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-skype" aria-hidden="true"></i>
-					</a>
-				</div>
-				<div class="col-sm-3">
-					
-					<img src="./images/team/team-img-02.jpg" alt="woman">
-					<p>Sakura Haruno</p>
-					<p>Financial Director</p>
-					<a href="#">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-google-plus-square" 
-						aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-skype" aria-hidden="true"></i>
-					</a>
-				</div>
-				<div class="col-sm-3">
-					
-					<img src="./images/team/team-img-03.jpg" alt="man">
-					<p>Sasuke Uchiha</p>
-					<p>Senior Web Designer</p>
-					<a href="#">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-google-plus-square" 
-						aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-skype" aria-hidden="true"></i>
-					</a>
-				</div>
-				<div class="col-sm-3">
-					
-					<img src="./images/team/team-img-03.jpg" alt="man">
-					<p>Shikamaru Nara</p>
-					<p>Web Designer</p>
-					<a href="#">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-google-plus-square" 
-						aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-skype" aria-hidden="true"></i>
-					</a>
-				</div>
-				
-				<!-- testimonals section -->
-				<div class="col-sm-12">
-					<h4>Testimonials</h4>
-					<p>What out clients are saying.</p>
-				</div>
-				
-				<div class="col-sm-6">
-					<div class="col-sm-2">
-						<img class="img-circle" src="./images/client-img.png" 
-						alt="portfolio img rounded">
+				<!-- meet the team article -->
+				<article>
+					<div class="col-sm-12">
+						<h4>Meet The Team.</h4>
 					</div>
 					<div class="col-sm-3">
-						<p>John Doe</p>
-						<p>Designer</p>
-					</div>
-					<div class="col-sm-12">
-						<p>
-							Phasellus - ut augue at sapien bibendum bibendum amet 
-							magna. Aenean condimentum, lacus sit amet luctus 
-							lobortis, enim tellus ultrices elit, amet consequat 
-							enim elit noneas.
-						</p>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="col-sm-2">
-						<img class="img-circle" src="./images/client-img.png" 
-						alt="portfolio img rounded">
+						
+						<img src="./images/team/team-img-01.jpg" 
+						alt="man with tie">
+						<p>Naruto Uzumaki</p>
+						<p>Director</p>
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-google-plus-square" 
+							aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-skype" aria-hidden="true"></i>
+						</a>
 					</div>
 					<div class="col-sm-3">
-						<p>Michael Smith</p>
-						<p>CEO</p>
+						
+						<img src="./images/team/team-img-02.jpg" alt="woman">
+						<p>Sakura Haruno</p>
+						<p>Financial Director</p>
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-google-plus-square" 
+							aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-skype" aria-hidden="true"></i>
+						</a>
 					</div>
+					<div class="col-sm-3">
+						
+						<img src="./images/team/team-img-03.jpg" alt="man">
+						<p>Sasuke Uchiha</p>
+						<p>Senior Web Designer</p>
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-google-plus-square" 
+							aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-skype" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						
+						<img src="./images/team/team-img-03.jpg" alt="man">
+						<p>Shikamaru Nara</p>
+						<p>Web Designer</p>
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-google-plus-square" 
+							aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-skype" aria-hidden="true"></i>
+						</a>
+					</div>
+				</article>
+
+				<!-- testimonals article -->
+				<article>
 					<div class="col-sm-12">
-						<p>
-							Nascetur augue hac platea enim, egestas pulvinar 
-							vut. Pulvinar cum, ac eu, tristie acus duis in 
-							dictumst non integer. Elit, sed scelerisque odio 
-							tortor, sed plateadis. Aenean condimentum, lacus sit
-							amet luctus lobortis, enim tellus ultrices elit.
-						</p>
+						<h4>Testimonials</h4>
+						<p>What out clients are saying.</p>
 					</div>
-				</div>
+					
+					<div class="col-sm-6">
+						<div class="col-sm-2">
+							<img class="img-circle" src="./images/client-img.png" 
+							alt="portfolio img rounded">
+						</div>
+						<div class="col-sm-3">
+							<p>John Doe</p>
+							<p>Designer</p>
+						</div>
+						<div class="col-sm-12">
+							<p>
+								Phasellus - ut augue at sapien bibendum bibendum 
+								amet magna. Aenean condimentum, lacus sit amet 
+								luctus lobortis, enim tellus ultrices elit, amet 
+								consequat enim elit noneas.
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="col-sm-2">
+							<img class="img-circle" src="./images/client-img.png" 
+							alt="portfolio img rounded">
+						</div>
+						<div class="col-sm-3">
+							<p>Michael Smith</p>
+							<p>CEO</p>
+						</div>
+						<div class="col-sm-12">
+							<p>
+								Nascetur augue hac platea enim, egestas pulvinar 
+								vut. Pulvinar cum, ac eu, tristie acus duis in 
+								dictumst non integer. Elit, sed scelerisque odio 
+								tortor, sed plateadis. Aenean condimentum, lacus 
+								sitamet luctus lobortis, enim tellus ultrices 
+								elit.
+							</p>
+						</div>
+					</div>
+				</article>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section><!-- /section.about-us-wrapper -->
-	<!-- END fourth section -->
+	<!-- END about us section -->
 
 	<!-- for loading gmaps.js -->
 	<div class="container-fluid">
@@ -702,7 +707,7 @@
 		</div>
 	</div>
 	
-	<!-- footer on page -->
+	<!-- Main footer -->
 	<footer>
 
 		<div class="container" id="contact-wrapper">
@@ -815,17 +820,17 @@
 			</div><!-- /div.container -->
 		</div><!-- /div.bootom-footer -->
 	</footer>
-	<!-- END footer on page -->
+	<!-- END main footer -->
 
 	<!-- JQ -->
 	<script src="./libs/jq/jquery-3.2.1.min.js"></script>
 	
-	<!-- Bootstrap JS -->
-	<script src="./libs/bootstrap/bootstrap.min.js"></script>
-	
 	<!-- my JS -->
 	<script src="./javascript/script.js"></script>
 
+	<!-- Bootstrap JS -->
+	<script src="./libs/bootstrap/bootstrap.min.js"></script>
+	
 	<!-- Google JS geolocation -->
 	<script src="http://maps.google.com/maps/api/js"></script>
 	<script src="./libs/gmaps/gmaps.js"></script>
