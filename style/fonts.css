@@ -6,13 +6,11 @@
 font-family: 'Montserrat-Regular';
 src:
     local('Montserrat-Regular'),
-    local('Montserrat-Regular'),
     url('./fonts/montserrat/Montserrat-Regular.ttf');
 }
 @font-face {
 font-family: 'Montserrat-Bold';
 src:
-    local('Montserrat-Bold'),
     local('Montserrat-Bold'),
     url('./fonts/montserrat/Montserrat-Bold.ttf');
 }
@@ -24,13 +22,11 @@ src:
 font-family: 'OpenSans-Regular';
 src:
     local('OpenSans-Regular'),
-    local('OpenSans-Regular'),
     url('./fonts/opensans/OpenSans-Regular.ttf');
 }
  @font-face {
 font-family: 'OpenSans-Light';
 src:
-    local('OpenSans-Light'),
     local('OpenSans-Light'),
     url('./fonts/opensans/OpenSans-Light.ttf');
 }

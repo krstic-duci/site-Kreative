@@ -1,9 +1,8 @@
 /**
 	TODO:
-	- line 32 I cutted img with overflow: hidden;
-	- proper image resize on all resolution
-	- proper navbar resize when viewport is <= 767px and proper alignment 
-	(look at site example)
+	- proper image resize at section top-page on all resolution
+	- proper page resize and proper alignment -> look at site example (viewport
+	is different at all resolutions)
  */
 
 /*=============================================
@@ -100,10 +99,10 @@ b: services section
 	font: 16px/30px 'OpenSans-Regular', sans-serif;
 	background-color: #1b1e21;
 	color: #4e565f;
-	padding-bottom: 172px;
+	padding: 166px 0 172px 0;
 }
 section h3, footer h3 {
-	margin-top: 166px;
+	/*margin-top: 166px;*/
 	font: 30px/42px 'Montserrat-Bold', sans-serif;
 	color: #11ABB0;
 }
@@ -113,7 +112,7 @@ section h3, footer h3 {
 }
 .explanation-para-in-service-section {
 	color: #57606b;
-	margin: 166px 0 30px 0;
+	margin: 0 0 30px 0;
 	font: 20px/36px 'OpenSans-Light', sans-serif;
 }
 .services-font-awesome {
@@ -122,15 +121,9 @@ section h3, footer h3 {
 	color: #c4c4c4;
 }
 .custom-col-sm i {
-	margin: 35px 5px 30px 0;
-	color: #c4c4c4;
-	font-size: 16px;
-}
-.para-sections-first-row {
-	margin-bottom: 31px;
-}
-.last-para-second-row {
-	margin-bottom: 184px;
+	margin: 40px 5px 30px 0;
+    color: #c4c4c4;
+    font-size: 16px;
 }
 @media screen and (max-width: 836px) {
 	.explanation-para-in-service-section {
@@ -141,9 +134,34 @@ section h3, footer h3 {
 /*-----------------------------  
 c: images & modal section  
 ------------------------------*/
+div.modal-body.change-pic-in-modal {
+	padding: 0;
+}
+div.modal-footer {
+	font: 11px/24px 'OpenSans-Regular', sans-serif;
+    background-color: #111;
+    padding: 25px;
+    text-align: left;
+    border: none;
+    letter-spacing: 3px;
+}
+div.modal-footer a {
+	margin: 0 23px 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+div.modal-footer a:hover {
+	-webkit-transition: color 0.2s linear;
+	-moz-transition: color 0.2s linear;
+	-o-transition: color 0.2s linear;
+	-ms-transition: color 0.2s linear;
+	transition: color 0.2s linear;
+	color: #11ABB0;
+	text-decoration: none;
+}
 .pic-wrapper {
 	background: url('../images/patterns/grey.png') repeat;
-	padding-bottom: 156px;
+	padding:136px 0 156px 0;
 }
 .explanation-para-portfolio-section {
 	color: #a3a3a3;
@@ -180,11 +198,29 @@ p.text-below-modal-img:hover {
 	color: #fff;
 	background-color: #0f9095;
 }
-/*____when user click on pic modal activate below class via JQ____*/
-.img-portfolio-modal {
-	
+.img-modal-change-margins {
+	margin-top: 30px;
 }
-
+.change-pic-in-modal {
+	font: 13px/24px 'OpenSans-Regular', sans-serif;
+}
+.change-pic-in-modal h6 {
+	margin: 30px 0 20px 40px;
+	font: 15px/24px 'Montserrat-Bold', sans-serif;
+	color: #111111;
+}
+.change-pic-in-modal p {
+	margin: 0 40px 20px 40px;
+    color: #a1a1a1;
+}
+.tag-text-modal-img {
+	margin-left: 5px;
+    font-size: 11px;
+    line-height: 24px;
+}
+.para-text-modal-img {
+	margin-right: 40px;
+}
 
 
 
