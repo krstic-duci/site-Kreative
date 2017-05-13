@@ -21,7 +21,8 @@
 		I:   our work process article
 		II:  meet the team article
 		III: testimonals article
-4. main footer
+	f: contact section
+4. footer
 =============================================*/
 
 
@@ -320,7 +321,6 @@ e: about us section
 	color: #a3a3a3;
 	margin-bottom: 64px; 
 }
-/*________________________________*/
 
 /*______meet the team article_____*/
 .h4-meet-the-team-article {
@@ -345,7 +345,6 @@ e: about us section
 	text-decoration: none;
 	color: #0f9095;
 }
-/*________________________________*/
 
 /*______testimonals article_______*/
 .h4-testimonials-article {
@@ -371,18 +370,92 @@ e: about us section
 	font: 18px/36px 'OpenSans-Light', sans-serif;
 	color: #a3a3a3;
 }
+/*-----------------------------  
+a: contact section  
+------------------------------*/
+section.contact-wrapper {
+	font-family: 'OpenSans-Regular', sans-serif;
+	padding-top: 110px;
+	background-color: #25292D;
+}
+.para-below-h3-contact-wrapper {
+	font-size: 14px;
+	line-height: 24px;
+	color: #57606b;
+	margin-bottom: 50px;
+}
+form {
+	font: 15px/24px 'OpenSans-Regular', sans-serif;
+	color: #fff;
+}
+.style-asteriks-contact-section {
+	color: #11ABB0;
+}
+.h5-heading-contact-section {
+	font: 21px/30px 'Montserrat-Bold', sans-serif;
+	color: #11abb0;
+}
+.para-below-h5-contact-section {
+	font: 15px/30px 'OpenSans-Regular', sans-serif;
+	color: #707b89;
+	margin-top: 19px;
+}
+.adress-in-contact-section {
+	margin: 20px 0;
+	font: 15px/30px 'OpenSans-Regular', sans-serif;
+	color: #707b89;
+}
+.contact-phone-email-contact-section {
+	font: 15px/30px 'OpenSans-Regular', sans-serif;
+	color: #707b89;
+}
+.template-info-contact-section {
+	margin: 50px 0 20px 0;
+}
+.para-below-template-info-contact-section {
+	font: 15px/30px 'OpenSans-Regular', sans-serif;
+	color: #707b89;
+}
+.button-submit {
+	margin-top: 20px;
+	letter-spacing: 2px;
+	font: 18px/30px 'Montserrat-Bold', sans-serif;
+	width: 140px;
+	height: 60px;
+	background-color: #11ABB0;
+	color: #fff;
+}
+.button-submit:hover {
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	background-color: #fff;
+	color: #25292d;
+	text-decoration: none;
+}
+.fa.fa-spinner.fa-3x {
+	display: none;
+	margin-left: 20px;
+}
+.form-group input,
+.form-group textarea {
+	background-color: #3F464B;
+	border-color: #3F464B;
+	border-radius: 0;
+}
+.change-color-input-textarea {
+	background-color: #11ABB0;
+}
 
-
-/*________________________________*/
 /*===   End of MAIN CONTENT comment block  ===*/
 
 
 /*=============================================
-4. MAIN FOOTER
+4. FOOTER
 =============================================*/
-.bottom-footer {
-	background-color: #ccc;
-}
+
 
 
 /*=====  End of FOOTER  comment block  =====*/

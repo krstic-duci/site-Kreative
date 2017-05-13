@@ -12,10 +12,14 @@
 	and there is a text-decoration on anchor tag
 	- lines 66 - 68 at fnc modalLoader, need to change bck color & color of para
 	when hover over img
+	- when click on submit btn img loading is not loading
  */
 
 
 $(function () {
+
+	/*----------  loading img when user click submit btn  ----------*/
+	addInteractiveContactSection();
 
 	/*----------  for smooth scrolling  ----------*/
 	smoothScroolOnClick();
@@ -148,5 +152,17 @@ function loseFocusOnActiveElem () {
 	/*----------  remove class from nav li (home) active elem when click ----------*/
 	$('.nav.navbar-nav li a').click(function() {
 		$('li.active-elem').removeClass();
+	});
+}
+function addInteractiveContactSection () {
+
+	/*----------  add img loading on click of a btn ----------*/
+	$('.button-submit').click(function() {
+		$('.fa.fa-spinner.fa-3x').css('display', 'inline');
+	});
+
+	/*----------  add color when user click inside form input & textarea ----------*/
+	$('.form-control').click(function() {
+		$(this).addClass('change-color-input-textarea');
 	});
 }
