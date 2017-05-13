@@ -8,20 +8,20 @@
 	- add customize pin on gmaps.js
 	- when scroll down or up with mouse through page ( must lose focus on nav li 
 	(home)) i.e. lose it's class, function loseFocusOnActiveElem
+	- when click on img in pic-wrapper, then close the modal focus is on the pic
+	and there is a text-decoration on anchor tag
+	- lines 66 - 68 at fnc modalLoader, need to change bck color & color of para
+	when hover over img
  */
 
 
 $(function () {
 
-
-	/*----------  for focusout on nav li elems  ----------*/
-	loseFocusOnActiveElem ();
-
 	/*----------  for smooth scrolling  ----------*/
 	smoothScroolOnClick();
 
-	/*----------  for loading Google geolocation  ----------*/
-	loadGeoLocation();
+	/*----------  for focusout on nav li elems  ----------*/
+	loseFocusOnActiveElem ();
 
 	/*----------  for loading modal pics  ----------*/
 	modalLoader();
@@ -56,16 +56,18 @@ $(function () {
 			$('.custom-col-sm-3').removeClass('col-sm-12').addClass('col-sm-9');
 			$('.custom-col-sm-4').removeClass('col-sm-6').addClass('col-sm-3');
 		}
-
-		/*----------  add class of bck color to .text-below-modal-img  ----------*/
-		$('a[data-target*="#myModal"]').mouseenter(function() {
-			alert('da');
-			$('p.text-below-modal-img').addClass('p.text-below-modal-img:hover');
-		});
-
 	});
+
+	/*----------  for loading Google geolocation  ----------*/
+	loadGeoLocation();
 });
 function modalLoader () {
+
+	/*----------  add class of bck color to .text-below-modal-img  ----------*/
+	$('div.col-md-3.col-sm-3.custom-col-sm-2').hover(function() {
+		$('.text-below-modal-img').addClass('text-below-modal-img:hover')
+		.removeClass('.text-below-modal-img');
+	});
 
 	$('.pic-wrapper').on('click', 'img', function(){
 
@@ -86,18 +88,17 @@ function modalLoader () {
         'Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat '+
         'ipsum, nec sagittis sem nibh id elit.';
 
+        /*----------  add value to modal  ----------*/
         for (var i = 0; i < textInHeading6.length; i++) {
         	$('.change-pic-in-modal').html(
 			'<img src="' + modalsSrc + '" alt="' + altSrc + '">'+
-			'<h6>'+ textInHeading6[i] +  '</h6>'+
+			'<h6>'+ 'Text to be added' +  '</h6>'+
 			'<p class="para-text-modal-img">'+ paraTextModalImg +'</p>'+
 			'<p>'+ 
 				'<i class="fa fa-tag" aria-hidden="true"></i>'+ 
-				'<span class="tag-text-modal-img"> ' + spanTextInsidePara[i] + '</span>'+
+				'<span class="tag-text-modal-img"> ' + 'Text to be added' + '</span>'+
 			'</p>');
         }
-        /*----------  add value to modal  ----------*/
-        
     });
 }
 function loadGeoLocation () {

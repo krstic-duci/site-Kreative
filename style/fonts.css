@@ -18,15 +18,21 @@ src:
  * Copyright 2017 Julieta Ulanovsky (http://www.zkysky.com.ar/)
  * Open Sans
  ________________________________________________________________*/
- @font-face {
+@font-face {
 font-family: 'OpenSans-Regular';
 src:
     local('OpenSans-Regular'),
     url('./fonts/opensans/OpenSans-Regular.ttf');
 }
- @font-face {
+@font-face {
 font-family: 'OpenSans-Light';
 src:
     local('OpenSans-Light'),
     url('./fonts/opensans/OpenSans-Light.ttf');
+}
+@font-face {
+font-family: 'OpenSans-Bold';
+src:
+    local('OpenSans-Bold'),
+    url('./fonts/opensans/OpenSans-Bold.ttf');
 }

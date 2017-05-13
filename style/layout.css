@@ -1,8 +1,11 @@
 /**
 	TODO:
+	- navbar not working as one at site example
 	- proper image resize at section top-page on all resolution
 	- proper page resize and proper alignment -> look at site example (viewport
 	is different at all resolutions)
+	- when screen resolution is <=767px need to shrink .text-below-modal-img
+	to fit to img size
  */
 
 /*=============================================
@@ -31,6 +34,10 @@
  /*____style div that holds gmaps____*/
 #map {
 	height: 400px;
+}
+section h3, footer h3 {
+	font: 30px/42px 'Montserrat-Bold', sans-serif;
+	color: #11ABB0;
 }
 
 
@@ -95,20 +102,14 @@ a: introduction section
 /*-----------------------------  
 b: services section  
 ------------------------------*/
-.divs-wrapper {
+.services-wrapper {
 	font: 16px/30px 'OpenSans-Regular', sans-serif;
 	background-color: #1b1e21;
 	color: #4e565f;
 	padding: 166px 0 172px 0;
 }
-section h3, footer h3 {
-	/*margin-top: 166px;*/
-	font: 30px/42px 'Montserrat-Bold', sans-serif;
-	color: #11ABB0;
-}
-.para-below-h3 {
-	font: 14px/24px;
-	color: #57606b;
+.services-wrapper h3{
+	margin-top: 5px;
 }
 .explanation-para-in-service-section {
 	color: #57606b;
@@ -180,7 +181,10 @@ div.modal-footer a:hover {
 .custom-col-sm-2 {
 	font: 13px/24px 'Montserrat-Bold', sans-serif;
 }
-p.text-below-modal-img {
+.text-below-modal-img span {
+	margin-left: 15px;
+}
+.text-below-modal-img {
 	-webkit-box-shadow: 1px 1px 2px #ccc;
 	-moz-box-shadow: 1px 1px 2px #ccc;
 	-o-box-shadow: 1px 1px 2px #ccc;
@@ -189,7 +193,7 @@ p.text-below-modal-img {
     background-color: #ffffff;
     line-height: 50px;
 }
-p.text-below-modal-img:hover {
+.text-below-modal-img:hover {
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
@@ -229,9 +233,54 @@ p.text-below-modal-img:hover {
 d: journal section  
 ------------------------------*/
 .journal-wrapper {
+	padding: 116px 0;
 	background-color: #0f9095;
 }
-
+.journal-wrapper h3 {
+	color: #fff;
+}
+.journal-wrapper .para-below-h3 {
+	margin-bottom: 85px;
+	font: 14px/24px 'OpenSans-Regular', sans-serif;
+	color: #c2f1f5;
+}
+.journal-wrapper .col-sm-9 a {
+	font: 30px/42px 'Montserrat-Regular', sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+.journal-wrapper .col-sm-9 a:hover {
+	-webkit-transition: color 0.3s linear;
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	-ms-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+	color: #005757;
+	text-decoration: none;
+}
+.date-of-submit-post-journal {
+	font: 14px/24px 'Montserrat-Bold', sans-serif;
+	color: #fff;
+}
+.name-of-submiter-journal {
+	font: 14px/24px 'OpenSans-Regular', sans-serif;
+	color: #fff;
+}
+.explanation-para-in-journal-sections {
+	font: 16px/30px 'OpenSans-Regular', sans-serif;
+	color: #7fe6ed;
+	margin: 20px 0 50px 0;
+}
+.col-sm-9 .explanation-para-in-journal-sections a {
+	cursor: default;
+	font: 15px/30px 'OpenSans-Bold', sans-serif;
+	text-decoration: none;
+	color: #fff;
+}
+.col-sm-9 .explanation-para-in-journal-sections a:hover {
+	text-decoration: none;
+	color: #005757;
+}
 
 
 
@@ -242,20 +291,87 @@ d: journal section
 /*-----------------------------  
 e: about us section  
 ------------------------------*/
-
-
-
-
+.about-us-wrapper {
+	background: url('../images/patterns/grey.png') repeat;
+	padding: 166px 0 178px 0;
+}
+.about-us-wrapper .para-below-h3 {
+	font: 14px/24px 'OpenSans-Regular', sans-serif;
+	color: #999999;
+}
+.explanation-para-in-about-us-sections {
+	font: 20px/36px 'OpenSans-Light', sans-serif;
+	color: #a3a3a3;
+	margin: 15px 0 66px 0;
+}
 
 /*____our work process article____*/
-
+.h4-our-work-article {
+	font: 24px/30px 'Montserrat-Regular', sans-serif;
+	color: #6e6e6e;
+}
+.headline-our-work-process-article {
+	font: 15px/24px 'Montserrat-Bold', sans-serif;
+	color: #0f9095;
+	margin: 13px 0 8px 0;
+}
+.text-our-work-process-article {
+	font: 15px/30px 'OpenSans-Regular', sans-serif;
+	color: #a3a3a3;
+	margin-bottom: 64px; 
+}
 /*________________________________*/
 
 /*______meet the team article_____*/
-
+.h4-meet-the-team-article {
+	font: 24px/30px 'Montserrat-Regular', sans-serif;
+	color: #6e6e6e;
+}
+.name-in-team {
+	font: 14px/24px 'Montserrat-Bold', sans-serif;
+	color: #0f9095;
+	margin: 8px 0 4px 0;
+}
+.function-in-team {
+	font: 13px/18px 'OpenSans-Regular', sans-serif;
+	color: #969696;
+}
+.col-sm-3 a {
+	margin-right: 15px;
+	text-decoration: none;
+	color: #969696;
+}
+.col-sm-3 a:hover {
+	text-decoration: none;
+	color: #0f9095;
+}
 /*________________________________*/
 
 /*______testimonals article_______*/
+.h4-testimonials-article {
+	margin-top: 56px;
+	font: 30px/42px 'Montserrat-Bold', sans-serif;
+	color: #0f9095;
+}
+.para-below-h4-testimonials {
+	font: 14px/24px 'OpenSans-Regular', sans-serif;
+	color: #999999;
+	margin-bottom: 56px;
+}
+.name-of-user {
+	font: 14px/24px 'Montserrat-Bold', sans-serif;
+	color: #0f9095;
+}
+.user-occupation {
+	font: 13px/18px 'OpenSans-Regular', sans-serif;
+	color: #969696;
+}
+.user-comment-testimonials {
+	margin-top: 15px;
+	font: 18px/36px 'OpenSans-Light', sans-serif;
+	color: #a3a3a3;
+}
+
 
 /*________________________________*/
 /*===   End of MAIN CONTENT comment block  ===*/
