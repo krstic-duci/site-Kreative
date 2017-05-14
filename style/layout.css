@@ -1,24 +1,23 @@
 /**
 	TODO:
-	- navbar not working as one at site example
-
-	- proper image resize at section top-page on all resolution
-
 	- proper page resize and proper alignment -> look at site example (viewport
 	is different at all resolutions)
 
+	- navbar not working as one at site example - functionality
+
 	- navbar doesn't look the same when resolution is <=767px
+
+	- proper image resize at  on all resolution (section top-page)
 
 	- proper modal working when resolution is <= 767px (section pics-wrapper)
 
 	- need to fix date-of-submit & name-of-submiter (journal-section) when <=767px
 	(same with testimonail article, but with name & occupation of user)
 
-	- btn navbar is somehow fixed, although I set it to center (contact section)
-
 	- glow when click on form (contact section)
- */
 
+	- label proper alignment (contact section)
+*/
 /*=============================================
 					Legend:
 1. general style
@@ -34,6 +33,7 @@
 		III: testimonals article
 	f: contact section
 4. footer
+5. blog
 =============================================*/
 
 
@@ -64,7 +64,6 @@ section h3, footer h3 {
 		text-align: center;
 	}
 }
-
 /*=====  End of GENERAL STYLE  ======*/
 
 
@@ -133,13 +132,6 @@ a: introduction section
 .blue-words {
 	color: #11ABB0;
 }
-
-
-
-
-
-
-
 /*-----------------------------  
 b: services section  
 ------------------------------*/
@@ -348,12 +340,6 @@ d: journal section
 		cursor: pointer;
 	}
 }
-
-
-
-
-
-
 /*-----------------------------  
 e: about us section  
 ------------------------------*/
@@ -390,7 +376,6 @@ e: about us section
 	color: #a3a3a3;
 	margin-bottom: 64px; 
 }
-
 /*______meet the team article_____*/
 .h4-meet-the-team-article {
 	font: 24px/30px 'Montserrat-Regular', sans-serif;
@@ -537,14 +522,59 @@ button.button-submit:hover {
 .change-color-input-textarea {
 	background-color: #11ABB0;
 }
-
 /*===   End of MAIN CONTENT comment block  ===*/
 
 
 /*=============================================
 4. FOOTER
 =============================================*/
-
-
-
+footer {
+	padding: 20px 0;
+	font: 14px/24px 'OpenSans-Regular', sans-serif;
+	background-color: #070707;
+	color: #303030;
+}
+.border-break-footer {
+	margin: 0 10px;
+}
+.border-break-footer, .anchor-tag-footer {
+	color: #0B686B;
+}
+.anchor-tag-footer {
+	text-decoration: none;
+}
+.anchor-tag-footer:hover {
+	text-decoration: none;
+	color: #fff;
+}
+div.col-sm-6.footer-anchors {
+	text-align: right;
+}
+.footer-anchors>a{
+	margin-right: 20px;	
+}
+.footer-anchors a:hover {
+	text-decoration: none;
+}
+.footer-anchors a i {
+	color: #0B686B;
+	font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+	div.col-sm-6.footer-anchors, div.col-sm-6 p.copyright-site {
+		text-align: center;
+	}
+}
 /*=====  End of FOOTER  comment block  =====*/
+
+
+/*=============================================
+5. BLOG STYLE            
+=============================================*/
+.wrapper-container {
+	background: url('../images/patterns/grey.png') repeat;
+}
+
+
+
+/*=====  End of BLOG STYLE   ======*/

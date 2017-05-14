@@ -1,8 +1,8 @@
 /**
 
 	TODO:
-	(napisao sam 819 na liniji 35 jer je 836px trazena rezolucija kada se menja
-	pozicija elementa, i ona(836) je manja za 17px(tako sam dobio 819) i tek 
+	(napisao sam 819 na liniji 45 jer je 836px trazena rezolucija kada se menja
+	pozicija elementa, i ona (836) je manja za 17px(tako sam dobio 819) i tek 
 	tada dobijam da se viewport menja na 836px)
 
 	- add customize pin on gmaps.js
@@ -16,7 +16,7 @@
 	- when click on text-below-modal-img there is no img in modal body (section
 	pics-wrapper)
 
-	- lines 68 - 70 at fnc modalLoader, need to change bck color & color of para
+	- lines 76 - 79 at fnc modalLoader, need to change bck color & color of para
 	when hover over img (section pics-wrapper)
 
 	- proper modal working when resolution is <= 767px (section pics-wrapper)
@@ -179,8 +179,8 @@ function smoothScroolOnClick () {
 function loseFocusOnActiveElem () {
 
 	/*----------  remove class from nav li (home) active elem when scroll ----------*/
-	$('li.active-elem.active a').focusout(function() {
-		$('li.active-elem').removeClass();
+	$('.nav.navbar-nav li a').focusout(function() {
+		$('li.active-elem.').removeClass();
 	});
 
 	/*----------  remove class from nav li (home) active elem when click ----------*/

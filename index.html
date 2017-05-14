@@ -3,9 +3,12 @@
 	TODO:
 	- remove jumps when viewport changes (margins left & right is different at
 	all resolutions)
+
 	- proper page resize and proper alignment -> look at site example (viewport
 	is different at all resolutions)
+
 	- navbar doesn't look the same when resolution is <=767px
+	
 	- at section journal wrapper add proper href tag
 
  -->
@@ -16,11 +19,11 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- for non-zoooming mode -->
+    <!-- For non-zoooming mode -->
 	<meta name="viewport" content="width=device-width, initial-scale=1,
 	maximum-scale=1, user-scalable=no"> 
 	
-	<!-- local fonts -->
+	<!-- Local fonts -->
 	<link rel="stylesheet" href="./style/fonts.css">
 
 	<!-- Local CSS file -->
@@ -33,12 +36,13 @@
 	<link rel="stylesheet" href="./libs/font-awesome-4.7.0/css/
 	font-awesome.min.css">
 
+	<!-- Icon site on title -->
 	<link rel="shortcut icon" href="./images/favicon.ico" />	
 	<title>Kreative</title> 
 </head>  
 <body data-spy="scroll" data-target="#main-navbar">
 
-	<!-- logo img and navbar -->
+	<!-- Logo img and navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top style-navbar" 
 	id="main-navbar">
 
@@ -56,7 +60,8 @@
     		  	<a class="navbar-brand" href="#">
     		  		<img src="./images/logo.png" alt="logo-img-kreative">
     		  	</a>
-    		</div>
+    		</div><!-- /div.navbar-header -->
+
     		<!-- navbar -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     		  	<ul class="nav navbar-nav">
@@ -70,63 +75,62 @@
     		</div><!-- /div.navbar-collapse -->
   		</div><!-- /div.container- -->
 	</nav>
-	<!-- END logo img and navbar -->
+	<!-- END Logo img and navbar -->
 
-	<!-- introduction section -->
-	<section id="top-page">
+	<!-- Introduction section -->
+	<section class="top-page" id="top-page">
 
-	<div class="container-fluid">
+		<div class="container-fluid">
 
-		<div class="row">
+			<div class="row">
 	
-  			<div class="introduction-part">
+  				<div class="introduction-part">
 
-  			  	<div class="static-pic-below-navbar">
-  			  	  	<img src="./images/post-image/post-image-a-972x360.jpg" 
-  			  	  	alt="lion-statue-stone" class="img-responsive 
-  			  	  	static-pic-on-page">
-  			  	 </div>
+  			  		<div class="static-pic-below-navbar">
+  			  		  	<img src="./images/post-image/post-image-a-972x360.jpg" 
+  			  		  	alt="lion-statue-stone" class="img-responsive 
+  			  		  	static-pic-on-page">
+  			  		 </div>
 
-				<!-- Controls left and right btn-->
-  				<!-- <img src="./images/direction-nav-left.png" 
-  				alt="left-direction-arrow">
-  				<img src="./images/direction-nav-right.png" 
-  				alt="right-direction-arrow">
-
-  			  	<div class="text-to-swap">
-  			  		<h1>
-  			  			Hello, we are <span class="blue-words">
-  			  			kreative</span>. We specialize in branding, 
-  			  			websites and photography.
-  			  		</h1>
-  			  		<p>
-  			  			Aenean condimentum, lacus sit amet luctus 
-  			  			lobortis, dolores et quas molestias excepturi 
-  			  			enim tellus ultriceselit, amet consequat enim 
-  			  			elit noneas sit amet luctu.
-  			  		</p>
-  			  	</div>
-  			  	
-  			  	<div class="text-to-swap">
-  			  	  	<h1>
-  			  	  		Take a look at some of 
-  			  	  		<a href="#pic-wrapper">
-  			  	  			<span class="blue-words">our works</span>
-  			  	  		</a> or
-  			  	  		<a href="#about-us-wrapper">
-  			  	  			<span class="blue-words">get in touch</span>
-  			  	  		</a> to discuss how we can help you.
-  			  	  	</h1>
-  			  	  	<p>
-  			  	  		At vero eos et accusamus et iusto odio 
-  			  	  		dignissimos ducimus qui blanditiis praesentium 
-  			  	  		voluptatum deleniti eos et accusamus.
-  			  	  	</p>
-  			  	</div> -->
-  			</div><!-- /div.introduction-part -->
-
-		</div><!-- /div.row -->
-	</div><!-- /div.container-fluid -->
+					<!-- Controls left and right btn-->
+  					<!-- <img src="./images/direction-nav-left.png" 
+  					alt="left-direction-arrow">
+  					<img src="./images/direction-nav-right.png" 
+  					alt="right-direction-arrow">
+	
+  			  		<div class="text-to-swap">
+  			  			<h1>
+  			  				Hello, we are <span class="blue-words">
+  			  				kreative</span>. We specialize in branding, 
+  			  				websites and photography.
+  			  			</h1>
+  			  			<p>
+  			  				Aenean condimentum, lacus sit amet luctus 
+  			  				lobortis, dolores et quas molestias excepturi 
+  			  				enim tellus ultriceselit, amet consequat enim 
+  			  				elit noneas sit amet luctu.
+  			  			</p>
+  			  		</div>
+  			  		
+  			  		<div class="text-to-swap">
+  			  		  	<h1>
+  			  		  		Take a look at some of 
+  			  		  		<a href="#pic-wrapper">
+  			  		  			<span class="blue-words">our works</span>
+  			  		  		</a> or
+  			  		  		<a href="#about-us-wrapper">
+  			  		  			<span class="blue-words">get in touch</span>
+  			  		  		</a> to discuss how we can help you.
+  			  		  	</h1>
+  			  		  	<p>
+  			  		  		At vero eos et accusamus et iusto odio 
+  			  		  		dignissimos ducimus qui blanditiis praesentium 
+  			  		  		voluptatum deleniti eos et accusamus.
+  			  		  	</p>
+  			  		</div> -->
+  				</div><!-- /div.introduction-part -->
+			</div><!-- /div.row -->
+		</div><!-- /div.container-fluid -->
 	</section>
 	<!-- END introduction section -->
 
@@ -154,12 +158,9 @@
 							blanditis praesentium.
 						</p>
 					</div>
-				</div>
-			</div><!-- /div.row -->
-			
-			<div class="row">
+				</div><!-- /div.intro-to-section -->
 
-				<!-- first row -->
+				<!-- First row -->
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-desktop" aria-hidden="true"></i>
 					<span class="services-font-awesome">WEB DESIGN</span>
@@ -194,7 +195,7 @@
 					</p>
 				</div>
 
-				<!-- second row -->
+				<!-- Second row -->
 				<div class="col-sm-4 custom-col-sm">
 					<i class="fa fa-globe" aria-hidden="true"></i>
 					<span class="services-font-awesome">WEB DEVELOPMENT</span>
@@ -228,6 +229,7 @@
 						molestias iusto odio dignissimos.
 					</p>
 				</div>
+
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section>
@@ -259,9 +261,9 @@
 							qui blanditi is praesentium.
 						</p>
 					</div>
-				</div>
+				</div><!-- /div.intro-to-section -->
 
-				<!-- first row of pictures -->
+				<!-- First row of pictures -->
 				<div class="col-md-3 col-sm-3 custom-col-sm-2">
 					
 					<!-- Link trigger modal -->
@@ -311,7 +313,7 @@
 					</a>
 				</div>
 
-				<!-- second row of pictures -->
+				<!-- Second row of pictures -->
 				<div class="col-md-3 col-sm-3 custom-col-sm-2">
 					
 					<!-- Link trigger modal -->
@@ -369,7 +371,7 @@
 
 				  	  	<div class="modal-content">
 
-							<!-- call JQ fnc modalLoader for img -->
+							<!-- Call JQ fnc modalLoader for img & text -->
 				  	  	  	<div class="modal-body change-pic-in-modal">
 
 				  	  	  	</div>
@@ -381,10 +383,11 @@
 				  	  	    	<a href="#" data-dismiss="modal">
 				  	  	    	 	CLOSE
 				  	  	  		</a>
-				  	  	  </div>
+				  	  	    </div><!-- /div.modal-footer -->
 				  	  	</div><!-- /div.modal-content -->
 				  	</div><!-- /div.modal-dialog -->
 				</div><!-- /div.modal fade -->
+
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section>
@@ -402,9 +405,9 @@
 						<h3>Journal</h3>
 						<p class="para-below-h3">Our latest posts and rants.</p>
 					</div>
-				</div>
+				</div><!-- /div.intro-to-section -->
 
-				<!-- user one post -->
+				<!-- User one post -->
 				<div class="col-sm-1">
 					<img src="./images/user-03.png" alt="portfolio picture man" 
 					class="img-circle user-img-journal">
@@ -437,77 +440,75 @@
 				</div>
 			</div><!-- /div.row -->
 
-				<!-- user two post -->
-				<div class="row">
+			<!-- User two post -->
+			<div class="row">
+				<div class="col-sm-1">
+					<img src="./images/user-02.png" class="img-circle 
+					user-img-journal" alt="portfolio picture woman">
+				</div>
+				<div class="col-sm-9">
+					<a href="#">
+						<div class="anchor-tag-question-journal-section">
+							Nemo enim ipsam voluptatem quia voluptas sit 
+							aspernatur aut odit aut fugit sed.
+						</div>
+					</a>  
+				</div>
+				<div class="col-sm-2">
+					<p class="date-of-submit-post-journal">
+						AUG 9, 2045 
+					<p class="name-of-submiter-journal">
+						By Jane Doe
+					</p>
+					</p>
+				</div>
+				<div class="col-sm-offset-1 col-sm-9">
+					<p class="explanation-para-in-journal-sections">
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum 
+						deleniti atque corrupti quos dolores et quas 
+						molestias excepturi sint occaecati cupiditate. 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium. 
+						<a href="#">Read More ></a>
+					</p>
+				</div>
+			</div><!-- /div.row -->
 
-					<div class="col-sm-1">
-						<img src="./images/user-02.png" class="img-circle 
-						user-img-journal" alt="portfolio picture woman">
-					</div>
-					<div class="col-sm-9">
-						<a href="#">
-							<div class="anchor-tag-question-journal-section">
-								Nemo enim ipsam voluptatem quia voluptas sit 
-								aspernatur aut odit aut fugit sed.
-							</div>
-						</a>  
-					</div>
-					<div class="col-sm-2">
-						<p class="date-of-submit-post-journal">
-							AUG 9, 2045 
-						<p class="name-of-submiter-journal">
-							By Jane Doe
-						</p>
-						</p>
-					</div>
-					<div class="col-sm-offset-1 col-sm-9">
-						<p class="explanation-para-in-journal-sections">
-							At vero eos et accusamus et iusto odio dignissimos 
-							ducimus qui blanditiis praesentium voluptatum 
-							deleniti atque corrupti quos dolores et quas 
-							molestias excepturi sint occaecati cupiditate. 
-							At vero eos et accusamus et iusto odio dignissimos 
-							ducimus qui blanditiis praesentium. 
-							<a href="#">Read More ></a>
-						</p>
-					</div>
-				</div><!-- /div.row -->
-
-				<div class="row">
-
-					<!-- user three post -->
-					<div class="col-sm-1">
-						<img src="./images/user-03.png" alt="portfolio picture man" 
-						class="img-circle user-img-journal">
-					</div>
-					<div class="col-sm-9">
-						<a href="#">
-							<div class="anchor-tag-question-journal-section">
-								Quis autem vel esse eum iure reprehenderit 
-								qui in ea voluptate velit esse.
-							</div>
-						</a> 
-					</div>
-					<div class="col-sm-2">
-						<p class="date-of-submit-post-journal">
-							AUG 7, 2045 
-						<p class="name-of-submiter-journal">
-							By Naruto Uzumaki	
-						</p>
-						</p>
-					</div>
-					<div class="col-sm-offset-1 col-sm-9">
-						<p class="explanation-para-in-journal-sections">
-							At vero eos et accusamus et iusto odio dignissimos 
-							ducimus qui blanditiis praesentium voluptatum 
-							deleniti atque corrupti quos dolores et quas 
-							molestias excepturi sint occaecati cupiditate. 
-							At vero eos et accusamus et iusto odio dignissimos 
-							ducimus qui blanditiis praesentium. 
-							<a href="#">Read More ></a>
-						</p>
-					</div>
-				</div><!-- /div.row -->
+			<!-- User three post -->
+			<div class="row">
+				<div class="col-sm-1">
+					<img src="./images/user-03.png" alt="portfolio picture man" 
+					class="img-circle user-img-journal">
+				</div>
+				<div class="col-sm-9">
+					<a href="#">
+						<div class="anchor-tag-question-journal-section">
+							Quis autem vel esse eum iure reprehenderit 
+							qui in ea voluptate velit esse.
+						</div>
+					</a> 
+				</div>
+				<div class="col-sm-2">
+					<p class="date-of-submit-post-journal">
+						AUG 7, 2045 
+					<p class="name-of-submiter-journal">
+						By Naruto Uzumaki	
+					</p>
+					</p>
+				</div>
+				<div class="col-sm-offset-1 col-sm-9">
+					<p class="explanation-para-in-journal-sections">
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium voluptatum 
+						deleniti atque corrupti quos dolores et quas 
+						molestias excepturi sint occaecati cupiditate. 
+						At vero eos et accusamus et iusto odio dignissimos 
+						ducimus qui blanditiis praesentium. 
+						<a href="#">Read More ></a>
+					</p>
+				</div>
+			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section>
 	<!-- END journal section  -->
@@ -533,9 +534,9 @@
 							 mauris. Morbi accumsan ipsum velit.
 						</p>
 					</div>
-				</div>
+				</div><!-- /div.intro-to-section -->
 
-				<!-- our work process article -->
+				<!-- Our work process article -->
 				<article>
 					<div class="col-sm-12">
 						<h4 class="h4-our-work-article">Our Work Process.</h4>
@@ -582,12 +583,13 @@
 					</div>
 				</article>
 
-				<!-- meet the team article -->
+				<!-- Meet the team article -->
 				<article>
 					<div class="col-sm-12">
 						<h4 class="h4-meet-the-team-article">Meet The Team.</h4>
 					</div>
 
+					<!-- Team member No.1 -->
 					<div class="col-sm-3 team-members">
 						<img class="img-responsive" alt="man with tie" 
 						src="./images/team/team-img-01.jpg">
@@ -611,6 +613,7 @@
 						</a>
 					</div>
 
+					<!-- Team member No.2 -->
 					<div class="col-sm-3 team-members">
 						<img class="img-responsive" alt="woman"
 						src="./images/team/team-img-02.jpg">
@@ -634,6 +637,7 @@
 						</a>
 					</div>
 
+					<!-- Team member No.3 -->
 					<div class="col-sm-3 team-members">
 						<img class="img-responsive" alt="man" 
 						src="./images/team/team-img-03.jpg">
@@ -657,6 +661,7 @@
 						</a>
 					</div>
 
+					<!-- Team member No.4 -->
 					<div class="col-sm-3 team-members">
 						<img class="img-responsive" alt="man"
 						 src="./images/team/team-img-03.jpg">
@@ -681,7 +686,7 @@
 					</div>
 				</article>
 
-				<!-- testimonals article -->
+				<!-- Testimonals article -->
 				<article>
 
 					<div class="col-sm-12">
@@ -691,7 +696,7 @@
 						</p>
 					</div>
 					
-					<!-- user grade no.1 -->
+					<!-- User grade no.1 -->
 					<div class="col-sm-6">
 						<div class="col-sm-2 portfolio-img-testimonial-article">
 							<img class="img-circle" 
@@ -711,7 +716,7 @@
 						</div>
 					</div>
 
-					<!-- user grade no.2 -->
+					<!-- User grade no.2 -->
 					<div class="col-sm-6">
 						<div class="col-sm-2 portfolio-img-testimonial-article">
 							<img class="img-circle" 
@@ -732,21 +737,20 @@
 							</p>
 						</div>
 					</div>
-
 				</article>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
 	</section>
-	<!-- END about us section -->
+	<!-- END About us section -->
 
-	<!-- for loading gmaps.js -->
+	<!-- Container for loading gmaps.js -->
 	<div class="container-fluid">
 		<div class="row">
 			<div id="map"></div>
 		</div>
 	</div>
 	
-	<!-- contact section -->
+	<!-- Contact section -->
 	<section class="contact-wrapper" id="contact-wrapper">
 
 		<div class="container">
@@ -759,9 +763,13 @@
 						Get in touch with us.
 					</p>
 				</div>
+
+				<!-- Form elements -->
 				<div class="col-sm-6">
 					<form class="form-horizontal">
 						<div class="form-group">
+
+							<!-- Name in input form -->
   						  	<label for="inputEmail3" 
   						  	class="col-sm-2 control-label">
   						  		Name 
@@ -774,6 +782,8 @@
   						  	  	id="inputEmail3">
   						  	</div>
   						</div>
+
+						<!-- Email adress in input form -->
   						<div class="form-group">
   						  	<label for="inputEmail3" 
   						  	class="col-sm-2 control-label">
@@ -787,6 +797,8 @@
   						  	  	id="inputEmail3">
   						  	</div>
   						</div>
+
+						<!-- Subject of message in form -->
   						<div class="form-group">
   						  	<label for="inputPassword3" 
   						  	class="col-sm-2 control-label">
@@ -797,6 +809,8 @@
   						  	  	id="inputPassword3">
   						  	</div>
   						</div>
+
+  						<!-- Question itself in input form -->
   						<div class="form-group">
   						  	<label for="inputPassword3" 
   						  	class="col-sm-2 control-label">
@@ -812,6 +826,8 @@
   						  	  	</textarea>
   						  	</div>
   						</div>
+
+  						<!-- Submit button -->
   						<div class="form-group">
   						  	<div class="col-sm-offset-2 col-sm-10">
   						  	  	<button type="submit" 
@@ -823,7 +839,9 @@
   						  	</div>
   						</div>
 					</form>
-				</div>
+				</div> <!-- /div.col-sm-6 --> 
+
+				<!-- Address & info about company-->
 				<div class="col-sm-6" >
 		  			<h5 class="h5-heading-contact-section">Contact Information</h5>
 		  			<p class="para-below-h5-contact-section">
@@ -867,13 +885,16 @@
 			<div class="row">	
 
 				<div class="col-sm-6">
-					<p>
-						Copyright © 2045 Kreative<span class="border-break-footer">
-						 | </span> Design by 
-						<a href="http://www.styleshout.com/">Styleshout</a>
+					<p class="copyright-site">
+						Copyright © 2045 Kreative <span class="border-break-footer">
+						| </span> Design by 
+						<a href="http://www.styleshout.com/" 
+						class="anchor-tag-footer">
+							Styleshout
+						</a>
 					</p>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 footer-anchors">
 					<a href="#">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
 					</a>
