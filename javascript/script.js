@@ -4,15 +4,24 @@
 	(napisao sam 819 na liniji 35 jer je 836px trazena rezolucija kada se menja
 	pozicija elementa, i ona(836) je manja za 17px(tako sam dobio 819) i tek 
 	tada dobijam da se viewport menja na 836px)
-	- need to specify tags <h6>, <i>, <p> at function modalLoader 76 - 78 lines
+
 	- add customize pin on gmaps.js
+
 	- when scroll down or up with mouse through page ( must lose focus on nav li 
 	(home)) i.e. lose it's class, function loseFocusOnActiveElem
-	- when click on img in pic-wrapper, then close the modal focus is on the pic
-	and there is a text-decoration on anchor tag
-	- lines 66 - 68 at fnc modalLoader, need to change bck color & color of para
-	when hover over img
-	- when click on submit btn img loading is not loading
+
+	- when click on img in pic-wrapper, then close the modal, focus is on the pic
+	and there is a text-decoration on anchor tag (section pics-wrapper)
+
+	- when click on text-below-modal-img there is no img in modal body (section
+	pics-wrapper)
+
+	- lines 68 - 70 at fnc modalLoader, need to change bck color & color of para
+	when hover over img (section pics-wrapper)
+
+	- proper modal working when resolution is <= 767px (section pics-wrapper)
+	
+	- when click on submit btn img loading is not loading (section contact)
  */
 
 
@@ -42,9 +51,6 @@ $(function () {
 			/*----------  put Portfolio section on new lines ----------*/
 			$('.custom-col-sm-2').removeClass('col-sm-3').addClass('col-sm-4');
 
-			/*----------  img sneaker splash in Portfolio section add margin ----------*/
-			$('.spec-img-margin-portfolio').addClass('img-modal-change-margins');
-
 			/*----------  put About Us section second para on new lines ----------*/
 			$('.custom-col-sm-3').removeClass('col-sm-9').addClass('col-sm-12');
 
@@ -56,7 +62,6 @@ $(function () {
 			$('.custom-col-services').removeClass('col-sm-12').addClass('col-sm-8');
 			$('.custom-col-sm').removeClass('col-sm-6').addClass('col-sm-4');
 			$('.custom-col-sm-2').removeClass('col-sm-4').addClass('col-sm-3');
-			$('.spec-img-margin-portfolio').removeClass('img-modal-change-margins');
 			$('.custom-col-sm-3').removeClass('col-sm-12').addClass('col-sm-9');
 			$('.custom-col-sm-4').removeClass('col-sm-6').addClass('col-sm-3');
 		}
@@ -68,10 +73,10 @@ $(function () {
 function modalLoader () {
 
 	/*----------  add class of bck color to .text-below-modal-img  ----------*/
-	$('div.col-md-3.col-sm-3.custom-col-sm-2').hover(function() {
-		$('.text-below-modal-img').addClass('text-below-modal-img:hover')
-		.removeClass('.text-below-modal-img');
-	});
+	// $('img.img-responsive').hover(function() {
+	// 	$('.text-below-modal-img').removeClass('.text-below-modal-img')
+	// 	.addClass('.text-below-modal-img:hover');
+	// });
 
 	$('.pic-wrapper').on('click', 'img', function(){
 
@@ -80,29 +85,58 @@ function modalLoader () {
         var modalsSrc = imgSrc.slice(0,18) + '/modals/m-' + imgSrc.slice(19);
         var altSrc = $(this).attr('alt');
 
-        var textInHeading6 = ['The Cosmics Sneakers', 'Milk Splash', 'Eve',
-        					'Sneaker Splash', 'Judah', 'Vector Flower', 'Clock',
-        					'Fields'];
-
-        var spanTextInsidePara = ['Branding, Web Design', 'Branding, Web Design',
-        'Photography, Branding', 'Photography, Branding', 'Photography, Web Design',
-        'Branding, Web Design', 'Branding, Web Design', 'Photography'];
-
+        /*----------  for taking value & insert in modal body  ----------*/
+        var headingAndBrand = imgSrc.slice(19);
+        var textInHeading6 = '';
+        var spanTextInsidePara = '';
         var paraTextModalImg = 'Proin gravida nibh vel velit auctor aliquet.'+ 
         'Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat '+
         'ipsum, nec sagittis sem nibh id elit.';
 
-        /*----------  add value to modal  ----------*/
-        for (var i = 0; i < textInHeading6.length; i++) {
-        	$('.change-pic-in-modal').html(
-			'<img src="' + modalsSrc + '" alt="' + altSrc + '">'+
-			'<h6>'+ 'Text to be added' +  '</h6>'+
-			'<p class="para-text-modal-img">'+ paraTextModalImg +'</p>'+
-			'<p>'+ 
-				'<i class="fa fa-tag" aria-hidden="true"></i>'+ 
-				'<span class="tag-text-modal-img"> ' + 'Text to be added' + '</span>'+
-			'</p>');
+        switch (headingAndBrand) {
+        	case 'cosmic-sneakers.jpg':
+        		textInHeading6 = 'The Cosmics Sneakers';
+        		spanTextInsidePara = 'Branding, Web Design';
+        		break;
+        	case 'milk-splash.jpg':
+        		textInHeading6 = 'Milk Splash';
+        		spanTextInsidePara = 'Branding, Web Design';
+        		break;
+        	case 'eve.jpg':
+        		textInHeading6 = 'Eve';
+        		spanTextInsidePara = 'Photography, Branding';
+        		break;
+        	case 'sneaker-splash.jpg':
+        		textInHeading6 = 'Sneaker Splash';
+        		spanTextInsidePara = 'Photography, Branding';
+        		break;
+        	case 'judah.jpg':
+        		textInHeading6 = 'Judah';
+        		spanTextInsidePara = 'Photography, Web Design';
+        		break;
+        	case 'vector-flower.jpg':
+        		textInHeading6 = 'Vector Flower';
+        		spanTextInsidePara = 'Branding, Web Design';
+        		break;
+        	case 'clock.jpg':
+        		textInHeading6 = 'Clock';
+        		spanTextInsidePara = 'Branding, Web Design';
+        		break;
+        	case 'fields.jpg':
+        		textInHeading6 = 'Fields';
+        		spanTextInsidePara = 'Photography';
+        		break;
         }
+
+        /*----------  add value to modal  ----------*/
+        $('.change-pic-in-modal').html(
+		'<img src="' + modalsSrc + '" alt="' + altSrc + '">'+
+		'<h6>'+ textInHeading6 +  '</h6>'+
+		'<p class="para-text-modal-img">'+ paraTextModalImg +'</p>'+
+		'<p>'+ 
+			'<i class="fa fa-tag" aria-hidden="true"></i>'+ 
+			'<span class="tag-text-modal-img"> ' + spanTextInsidePara + '</span>'+
+		'</p>');
     });
 }
 function loadGeoLocation () {

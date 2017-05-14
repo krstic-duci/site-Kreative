@@ -5,6 +5,7 @@
 	all resolutions)
 	- proper page resize and proper alignment -> look at site example (viewport
 	is different at all resolutions)
+	- navbar doesn't look the same when resolution is <=767px
 	- at section journal wrapper add proper href tag
 
  -->
@@ -38,7 +39,7 @@
 <body data-spy="scroll" data-target="#main-navbar">
 
 	<!-- logo img and navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" 
+	<nav class="navbar navbar-inverse navbar-fixed-top style-navbar" 
 	id="main-navbar">
 
   		<div class="container">
@@ -49,7 +50,7 @@
     		  	data-target="#bs-example-navbar-collapse-1" >
     		  	  	<span class="sr-only">Toggle navigation</span>
     		  	  	<span class="icon-bar"></span>
-    		  	  	<span class="icon-bar"></span>
+    		  	  	<span class="icon-bar style-icon-bar"></span>
     		  	</button>
     		  	<!-- logo img -->
     		  	<a class="navbar-brand" href="#">
@@ -121,8 +122,8 @@
   			  	  		dignissimos ducimus qui blanditiis praesentium 
   			  	  		voluptatum deleniti eos et accusamus.
   			  	  	</p>
-  			  	</div>
-  			</div> --><!-- /div.introduction-part -->
+  			  	</div> -->
+  			</div><!-- /div.introduction-part -->
 
 		</div><!-- /div.row -->
 	</div><!-- /div.container-fluid -->
@@ -135,23 +136,27 @@
 		<div class="container">
 			
 			<div class="row">
-
-				<div class="col-md-4 col-sm-4">
-					<h3>Services</h3>
-					<p class="para-below-h3">Our list of awesome services.</p>
-				</div>
-				<div class="col-md-8 col-sm-8 custom-col-services">
-					<p class="explanation-para-in-service-section">
-						At vero eos et accusamus et iusto odio dignissimos 
-						ducimus qui blanditiis praesentium voluptatum deleniti 
-						atque corruptiquos dolores et quas molestias excepturi 
-						sint occaecati cupiditate. At vero eos et accusamus et 
-						iusto odio dignissimos ducimus qui blanditiis 
-						praesentium.
-					</p>
+				
+				<div class="intro-to-section">
+					<div class="col-md-4 col-sm-4">
+						<h3>Services</h3>
+						<p class="para-below-h3-services-section">
+							Our list of awesome services.
+						</p>
+					</div>
+					<div class="col-md-8 col-sm-8 custom-col-services">
+						<p class="explanation-para-in-service-section">
+							At vero eos et accusamus et iusto odio dignissimos 
+							ducimus qui blanditiis praesentium voluptatum 
+							deleniti atque corruptiquos dolores et quas molestias 
+							excepturi sint occaecati cupiditate. At vero eos et 
+							accusamus et iusto odio dignissimos ducimus qui 
+							blanditis praesentium.
+						</p>
+					</div>
 				</div>
 			</div><!-- /div.row -->
-
+			
 			<div class="row">
 
 				<!-- first row -->
@@ -225,7 +230,7 @@
 				</div>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</section><!-- /section.divs-wrapper -->
+	</section>
 	<!-- END services section -->
 
 	<!-- Image & Modal section -->
@@ -235,24 +240,27 @@
 			
 			<div class="row">
 				
-				<div class="col-sm-12">
-					<h3>Portfolio</h3>
-					<p class="para-below-h3-portfolio-section">
-						Check out our latest projects.
-					</p>
+				<div class="intro-to-section">
+
+					<div class="col-sm-12">
+						<h3>Portfolio</h3>
+						<p class="para-below-h3-portfolio-section">
+							Check out our latest projects.
+						</p>
+					</div>
+	
+					<div class="col-sm-12">
+						<p class="explanation-para-portfolio-section">
+							At vero eos et accusamus et iusto odio dignissimos 
+							ducimus qui blanditiis praesentium voluptatum 
+							deleniti atque corrupti quos dolores et quas 
+							molestias excepturisint occaecati cupiditate. At vero
+							eos et accusamus et iusto odio dignissimos ducimus 
+							qui blanditi is praesentium.
+						</p>
+					</div>
 				</div>
 
-				<div class="col-sm-12">
-					<p class="explanation-para-portfolio-section">
-						At vero eos et accusamus et iusto odio dignissimos 
-						ducimus qui blanditiis praesentium voluptatum deleniti 
-						atque corrupti quos dolores et quas molestias excepturi
-						sint occaecati cupiditate. At vero eos et accusamus et 
-						iusto odio dignissimos ducimus qui blanditi is 
-						praesentium.
-					</p>
-				</div>
-				
 				<!-- first row of pictures -->
 				<div class="col-md-3 col-sm-3 custom-col-sm-2">
 					
@@ -294,7 +302,7 @@
 					
 					<!-- Link trigger modal -->
 					<a href="#" data-toggle="modal" data-target="#myModal">
-						<img class="img-responsive spec-img-margin-portfolio"
+						<img class="img-responsive"
 						src="./images/portfolio/sneaker-splash.jpg" 
 						alt="sneaker and colors merging">
 						<p class="text-below-modal-img">
@@ -308,7 +316,7 @@
 					
 					<!-- Link trigger modal -->
 					<a href="#" data-toggle="modal" data-target="#myModal">
-						<img class="img-responsive img-modal-change-margins"
+						<img class="img-responsive"
 						src="./images/portfolio/judah.jpg" 
 						alt="yellowish lion statue">
 						<p class="text-below-modal-img">
@@ -320,7 +328,7 @@
 					
 					<!-- Link trigger modal -->
 					<a href="#" data-toggle="modal" data-target="#myModal">
-						<img class="img-responsive img-modal-change-margins"
+						<img class="img-responsive"
 						src="./images/portfolio/vector-flower.jpg" 
 						alt="color changing picture">
 						<p class="text-below-modal-img">
@@ -332,7 +340,7 @@
 					
 					<!-- Link trigger modal -->
 					<a href="#" data-toggle="modal" data-target="#myModal">
-						<img class="img-responsive img-modal-change-margins"
+						<img class="img-responsive"
 						src="./images/portfolio/clock.jpg" 
 						alt="old table clock">
 						<p class="text-below-modal-img">
@@ -344,7 +352,7 @@
 					
 					<!-- Link trigger modal -->
 					<a href="#" data-toggle="modal" data-target="#myModal">
-						<img class="img-responsive img-modal-change-margins"
+						<img class="img-responsive"
 						src="./images/portfolio/fields.jpg" 
 						alt="wheat on wind">
 						<p class="text-below-modal-img">
@@ -379,7 +387,7 @@
 				</div><!-- /div.modal fade -->
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</section><!-- /section.pics-wrapper -->
+	</section>
 	<!-- END image & modal section -->
 	
 	<!-- Journal section  -->
@@ -389,21 +397,35 @@
 	
 			<div class="row">
 				
-				<div class="col-sm-12">
-					<h3>Journal</h3>
-					<p class="para-below-h3">Our latest posts and rants.</p>
+				<div class="intro-to-section">
+					<div class="col-sm-12">
+						<h3>Journal</h3>
+						<p class="para-below-h3">Our latest posts and rants.</p>
+					</div>
 				</div>
 
 				<!-- user one post -->
 				<div class="col-sm-1">
 					<img src="./images/user-03.png" alt="portfolio picture man" 
-					class="img-circle">
+					class="img-circle user-img-journal">
 				</div>
 				<div class="col-sm-9">
 					<a href="#">
-						Proin gravida nibh vel velit auctor aliquet 
-						Aenean sollicitudin auctor.
-					</a>
+						<div class="anchor-tag-question-journal-section">
+							Proin gravida nibh vel velit auctor aliquet 
+							Aenean sollicitudin auctor.
+						</div>
+					</a> 
+				</div>
+				<div class="col-sm-2">
+					<p class="date-of-submit-post-journal">
+						AUG 19, 2045 
+					<p class="name-of-submiter-journal">
+						By Sakura Haruno
+					</p>
+					</p>
+				</div>
+				<div class="col-sm-offset-1 col-sm-9">
 					<p class="explanation-para-in-journal-sections">
 						At vero eos et accusamus et iusto odio dignissimos 
 						ducimus qui blanditiis praesentium voluptatum deleniti 
@@ -413,59 +435,32 @@
 						praesentium. <a href="#">Read More ></a>
 					</p>
 				</div>
-				<div class="col-sm-2">
-					<p class="date-of-submit-post-journal">
-						AUG 19, 2045 
-						<p class="name-of-submiter-journal">
-							By Sakura Haruno
-						</p>
-					</p>
-				</div>
 			</div><!-- /div.row -->
 
 				<!-- user two post -->
 				<div class="row">
 
 					<div class="col-sm-1">
-						<img src="./images/user-02.png" class="img-circle"
-						alt="portfolio picture woman">
+						<img src="./images/user-02.png" class="img-circle 
+						user-img-journal" alt="portfolio picture woman">
 					</div>
 					<div class="col-sm-9">
 						<a href="#">
-							Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
-							aut odit aut fugit sed.
-						</a>
-						<p class="explanation-para-in-journal-sections">
-							At vero eos et accusamus et iusto odio dignissimos 
-							ducimus qui blanditiis praesentium voluptatum 
-							deleniti atque corrupti quos dolores et quas 
-							molestias excepturi sint occaecati cupiditate. 
-							At vero eos et accusamus et iusto odio dignissimos 
-							ducimus qui blanditiis praesentium. 
-							<a href="#">Read More ></a>
-						</p>
+							<div class="anchor-tag-question-journal-section">
+								Nemo enim ipsam voluptatem quia voluptas sit 
+								aspernatur aut odit aut fugit sed.
+							</div>
+						</a>  
 					</div>
 					<div class="col-sm-2">
 						<p class="date-of-submit-post-journal">
 							AUG 9, 2045 
-							<p class="name-of-submiter-journal">
-								By Jane Doe
-							</p>
+						<p class="name-of-submiter-journal">
+							By Jane Doe
+						</p>
 						</p>
 					</div>
-				</div>
-
-				<div class="row">
-					<!-- user three post -->
-					<div class="col-sm-1">
-						<img src="./images/user-03.png" alt="portfolio picture man" 
-						class="img-circle">
-					</div>
-					<div class="col-sm-9">
-						<a href="#">
-							Quis autem vel esse eum iure reprehenderit qui in ea 
-							voluptate velit esse.
-						</a>
+					<div class="col-sm-offset-1 col-sm-9">
 						<p class="explanation-para-in-journal-sections">
 							At vero eos et accusamus et iusto odio dignissimos 
 							ducimus qui blanditiis praesentium voluptatum 
@@ -476,17 +471,45 @@
 							<a href="#">Read More ></a>
 						</p>
 					</div>
+				</div><!-- /div.row -->
+
+				<div class="row">
+
+					<!-- user three post -->
+					<div class="col-sm-1">
+						<img src="./images/user-03.png" alt="portfolio picture man" 
+						class="img-circle user-img-journal">
+					</div>
+					<div class="col-sm-9">
+						<a href="#">
+							<div class="anchor-tag-question-journal-section">
+								Quis autem vel esse eum iure reprehenderit 
+								qui in ea voluptate velit esse.
+							</div>
+						</a> 
+					</div>
 					<div class="col-sm-2">
 						<p class="date-of-submit-post-journal">
 							AUG 7, 2045 
-							<p class="name-of-submiter-journal">
-								By Naruto Uzumaki	
-							</p>
+						<p class="name-of-submiter-journal">
+							By Naruto Uzumaki	
+						</p>
+						</p>
+					</div>
+					<div class="col-sm-offset-1 col-sm-9">
+						<p class="explanation-para-in-journal-sections">
+							At vero eos et accusamus et iusto odio dignissimos 
+							ducimus qui blanditiis praesentium voluptatum 
+							deleniti atque corrupti quos dolores et quas 
+							molestias excepturi sint occaecati cupiditate. 
+							At vero eos et accusamus et iusto odio dignissimos 
+							ducimus qui blanditiis praesentium. 
+							<a href="#">Read More ></a>
 						</p>
 					</div>
 				</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</section><!-- /section.journal-wrapper -->
+	</section>
 	<!-- END journal section  -->
 
 	<!-- About us section -->
@@ -496,20 +519,22 @@
 			
 			<div class="row">
 				
-				<div class="col-sm-3">
-					<h3>About Us</h3>
-					<p class="para-below-h3">This is what we are.</p>
+				<div class="intro-to-section">
+					<div class="col-sm-3">
+						<h3>About Us</h3>
+						<p class="para-below-h3">This is what we are.</p>
+					</div>
+					<div class="col-sm-9 custom-col-sm-3">
+						<p class="explanation-para-in-about-us-sections">
+							Proin gravida nibh vel velit auctor aliquet. Aenean 
+							sollicitudin, lorem quis bibendum auctor, nisi elit 
+							consequat ipsum, nec sagittis sem nibh id elit. Duis 
+							sedodio sit amet nibh vulputate cursus a sit amet
+							 mauris. Morbi accumsan ipsum velit.
+						</p>
+					</div>
 				</div>
-				<div class="col-sm-9 custom-col-sm-3">
-					<p class="explanation-para-in-about-us-sections">
-						Proin gravida nibh vel velit auctor aliquet. Aenean 
-						sollicitudin, lorem quis bibendum auctor, nisi elit 
-						consequat ipsum, nec sagittis sem nibh id elit. Duis sed
-						odio sit amet nibh vulputate cursus a sit amet mauris. 
-						Morbi accumsan ipsum velit.
-					</p>
-				</div>
-				
+
 				<!-- our work process article -->
 				<article>
 					<div class="col-sm-12">
@@ -562,10 +587,10 @@
 					<div class="col-sm-12">
 						<h4 class="h4-meet-the-team-article">Meet The Team.</h4>
 					</div>
-					<div class="col-sm-3">
-						
-						<img class="img-responsive" src="./images/team/team-img-01.jpg" 
-						alt="man with tie">
+
+					<div class="col-sm-3 team-members">
+						<img class="img-responsive" alt="man with tie" 
+						src="./images/team/team-img-01.jpg">
 						<p class="name-in-team">Naruto Uzumaki</p>
 						<p class="function-in-team">Director</p>
 						<a href="#">
@@ -585,9 +610,10 @@
 							<i class="fa fa-skype" aria-hidden="true"></i>
 						</a>
 					</div>
-					<div class="col-sm-3">
-						
-						<img class="img-responsive" src="./images/team/team-img-02.jpg" alt="woman">
+
+					<div class="col-sm-3 team-members">
+						<img class="img-responsive" alt="woman"
+						src="./images/team/team-img-02.jpg">
 						<p class="name-in-team">Sakura Haruno</p>
 						<p class="function-in-team">Financial Director</p>
 						<a href="#">
@@ -607,9 +633,10 @@
 							<i class="fa fa-skype" aria-hidden="true"></i>
 						</a>
 					</div>
-					<div class="col-sm-3">
-						
-						<img class="img-responsive" src="./images/team/team-img-03.jpg" alt="man">
+
+					<div class="col-sm-3 team-members">
+						<img class="img-responsive" alt="man" 
+						src="./images/team/team-img-03.jpg">
 						<p class="name-in-team">Sasuke Uchiha</p>
 						<p class="function-in-team">Senior Web Designer</p>
 						<a href="#">
@@ -629,9 +656,10 @@
 							<i class="fa fa-skype" aria-hidden="true"></i>
 						</a>
 					</div>
-					<div class="col-sm-3">
-						
-						<img class="img-responsive" src="./images/team/team-img-03.jpg" alt="man">
+
+					<div class="col-sm-3 team-members">
+						<img class="img-responsive" alt="man"
+						 src="./images/team/team-img-03.jpg">
 						<p class="name-in-team">Shikamaru Nara</p>
 						<p class="function-in-team">Web Designer</p>
 						<a href="#">
@@ -655,15 +683,19 @@
 
 				<!-- testimonals article -->
 				<article>
+
 					<div class="col-sm-12">
 						<h4 class="h4-testimonials-article">Testimonials</h4>
-						<p class="para-below-h4-testimonials">What out clients are saying.</p>
+						<p class="para-below-h4-testimonials">
+							What out clients are saying.
+						</p>
 					</div>
 					
+					<!-- user grade no.1 -->
 					<div class="col-sm-6">
-						<div class="col-sm-2">
-							<img class="img-circle" src="./images/client-img.png" 
-							alt="portfolio img rounded">
+						<div class="col-sm-2 portfolio-img-testimonial-article">
+							<img class="img-circle" 
+							src="./images/client-img.png" alt="portfolio img rounded">
 						</div>
 						<div class="col-sm-3">
 							<p class="name-of-user">John Doe</p>
@@ -678,10 +710,12 @@
 							</p>
 						</div>
 					</div>
+
+					<!-- user grade no.2 -->
 					<div class="col-sm-6">
-						<div class="col-sm-2">
-							<img class="img-circle" src="./images/client-img.png" 
-							alt="portfolio img rounded">
+						<div class="col-sm-2 portfolio-img-testimonial-article">
+							<img class="img-circle" 
+							src="./images/client-img.png" alt="portfolio img rounded">
 						</div>
 						<div class="col-sm-3">
 							<p class="name-of-user">Michael Smith</p>
@@ -698,10 +732,11 @@
 							</p>
 						</div>
 					</div>
+
 				</article>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</section><!-- /section.about-us-wrapper -->
+	</section>
 	<!-- END about us section -->
 
 	<!-- for loading gmaps.js -->
@@ -711,6 +746,7 @@
 		</div>
 	</div>
 	
+	<!-- contact section -->
 	<section class="contact-wrapper" id="contact-wrapper">
 
 		<div class="container">
@@ -734,7 +770,7 @@
   						  		</span>
   						  	</label>
   						  	<div class="col-sm-10">
-  						  	  	<input type="email" class="form-control" 
+  						  	  	<input type="text" class="form-control input-lg" 
   						  	  	id="inputEmail3">
   						  	</div>
   						</div>
@@ -747,7 +783,7 @@
   						  		</span>
   						  	</label>
   						  	<div class="col-sm-10">
-  						  	  	<input type="email" class="form-control" 
+  						  	  	<input type="email" class="form-control input-lg" 
   						  	  	id="inputEmail3">
   						  	</div>
   						</div>
@@ -757,7 +793,7 @@
   						  		Subject
   						  	</label>
   						  	<div class="col-sm-10">
-  						  	  	<input type="password" class="form-control" 
+  						  	  	<input type="text" class="form-control input-lg" 
   						  	  	id="inputPassword3">
   						  	</div>
   						</div>
@@ -820,7 +856,8 @@
 		  		</div>
 			</div><!-- /div.row -->
 		</div><!-- /div.container -->
-	</section><!-- /#contact-wrapper -->
+	</section>
+	<!-- END contact section -->
 
 	<!-- footer -->
 	<footer>
