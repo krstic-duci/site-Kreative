@@ -36,3 +36,9 @@ src:
     local('OpenSans-Bold'),
     url('./fonts/opensans/OpenSans-Bold.ttf');
 }
+@font-face {
+font-family: 'OpenSans-Semibold';
+src:
+    local('OpenSans-Semibold'),
+    url('./fonts/opensans/OpenSans-Semibold.ttf');
+}
