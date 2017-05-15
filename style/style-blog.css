@@ -1,4 +1,9 @@
-/*=============================================
+/**
+	TODO:
+	- when resolution is <=767px need to place correctly divs inside 
+	article first-user-review, second-user-review & third-user-review
+/*
+=============================================
 					Legend:
 1. general style					
 2. blog
@@ -12,13 +17,18 @@
 .wrapper-container {
 	background: url('../images/patterns/grey.png') repeat;
 }
-.navbar-inverse {
-    background-color: #0b0b0b;
+img {
+	width: 100%;
+}
+ul.nav.navbar-nav {
+	width: 100%;
+}
+nav.navbar.navbar-inverse {
+    background-color: #232629;
     border-color: #080808;
 }
 nav.navbar {
 	font-family: 'OpenSans-Regular', sans-serif;
-    opacity: 0.8;
     margin-bottom: 0;
     border: 0;
 }
@@ -53,8 +63,13 @@ footer {
 	text-decoration: none;
 	color: #fff;
 }
-div.col-sm-3.footer-anchors {
-	text-align: right;
+div.col-sm-5.footer-anchors>a i:hover{
+	color: #fff;
+	transition: color 0.15s ease-in-out;
+	-moz-transition: color 0.15s ease-in-out;
+	-webkit-transition: color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out;
+	-ms-transition: color 0.15s ease-in-out;
 }
 .footer-anchors>a{
 	margin-right: 20px;	
@@ -67,8 +82,15 @@ div.col-sm-3.footer-anchors {
 	font-size: 18px;
 }
 @media screen and (max-width: 767px) {
-	div.col-sm-6.footer-anchors, div.col-sm-6 p.copyright-site {
+	div.col-sm-5.footer-anchors, div.col-sm-7 p.copyright-site,
+	div.col-sm-9 ul.blog-page-navigation, div.col-sm-3.btn-back-to-top {
 		text-align: center;
+	}
+	div.col-sm-3.btn-back-to-top {
+		margin-bottom: 50px;
+	}
+	ul.nav.navbar-nav li a{
+		margin-left: 20px;
 	}
 }
 /*=====  End of GENERAL STYLE   ======*/
@@ -179,12 +201,19 @@ ul.pagination>li>a:hover {
 	list-style-type: none;
 	background-color: #E6E8EB;
 }
+.links-to-site ul.blog-page-navigation>li {
+	text-align: left;
+}
 .blog-page-navigation li.curr-elem a,
 .blog-page-navigation li.curr-elem a:hover {
 	color: #11abb0;
 }
+ul.blog-page-navigation{
+	padding: 10px 0 30px;
+	padding-left: 0px;	
+}
 ul.blog-page-navigation li {
-    margin: 20px 15px 30px 0px;
+    margin:10px 15px 0 0;
 	display: inline-block;
 }
 ul.blog-page-navigation li a {
@@ -204,6 +233,9 @@ div .back-to-top-anchor a:hover {
 	text-decoration: none;
 	font: 13px/30px 'OpenSans-Bold', sans-serif;
 	color: #11abb0;	
+}
+div.col-sm-5.footer-anchors .style-rss-feed {
+	margin-right: 0;
 }
 /*=====  End of BLOG STYLE   ======*/
 
