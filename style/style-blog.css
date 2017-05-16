@@ -2,12 +2,17 @@
 	TODO:
 	- when resolution is <=767px need to place correctly divs inside 
 	article first-user-review, second-user-review & third-user-review
+	- problem with <li> <a> journal when it's come down to <= 767px
 /*
 =============================================
 					Legend:
-1. general style					
-2. blog
-3. blog-single-page
+1. General style					
+2. Blog:
+	a: reviews articles
+	b: pagination article 
+	c: navigation article
+	d: footer Blog
+3. Blog single page
 =============================================*/
 
 
@@ -17,10 +22,7 @@
 .wrapper-container {
 	background: url('../images/patterns/grey.png') repeat;
 }
-img {
-	width: 100%;
-}
-ul.nav.navbar-nav {
+.img-blog {
 	width: 100%;
 }
 nav.navbar.navbar-inverse {
@@ -58,6 +60,18 @@ footer {
 }
 .anchor-tag-footer {
 	text-decoration: none;
+	-moz-transition: color 0.15s ease-in-out;
+	-webkit-transition: color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out;
+	-ms-transition: color 0.15s ease-in-out;
+	transition: color 0.15s linear;
+	text-decoration: none;
+	color: #11abb0;
+	cursor: pointer;
+}
+.border-break-footer {
+	color: #11abb0;
+	margin: 0 10px;
 }
 .anchor-tag-footer:hover {
 	text-decoration: none;
@@ -99,6 +113,9 @@ div.col-sm-5.footer-anchors>a i:hover{
 /*=============================================
 2. BLOG STYLE            
 =============================================*/
+/*-----------------------------  
+a: reviews articles  
+------------------------------*/
 .first-user-review, .second-user-review, .third-user-review {
 	font-family: 'OpenSans-Regular', sans-serif;
 	padding: 135px 0 100px 0;
@@ -130,6 +147,7 @@ div.col-sm-5.footer-anchors>a i:hover{
 	color: #0C0C0C;
 	font-weight: bold;
 }
+
 .style-date-elem-of-category {
 	font-size: 14px;
 	line-height: 24px;
@@ -165,6 +183,9 @@ div.col-sm-5.footer-anchors>a i:hover{
 	color: #fff;
 	text-decoration: none;
 }
+/*-----------------------------  
+b: pagination article  
+------------------------------*/
 .pagination-of-blog {
     padding: 20px 0 90px 0;
 }
@@ -197,6 +218,9 @@ ul.pagination>li>a:hover {
 	background-color: #838A91;
 	color: #fff;
 }
+/*-----------------------------  
+a: navigation article  
+------------------------------*/
 .links-to-sites {
 	list-style-type: none;
 	background-color: #E6E8EB;
@@ -228,6 +252,9 @@ ul.blog-page-navigation li a:hover {
 .back-to-top-anchor {
 	margin-top: 20px;
 }
+/*-----------------------------  
+d: footer Blog  
+------------------------------*/
 div .back-to-top-anchor a,
 div .back-to-top-anchor a:hover {
 	text-decoration: none;
@@ -243,7 +270,9 @@ div.col-sm-5.footer-anchors .style-rss-feed {
 /*=============================================
 3. BLOG-SINGLE-PAGE STYLE            
 =============================================*/
-
+.img-blog-single {
+	padding: 57px 0 54px 0;
+}
 
 
 
