@@ -1,22 +1,14 @@
 /**
 	TODO:
-	- proper page resize and proper alignment -> look at site example (viewport
-	is different at all resolutions)
-
 	- navbar not working as one at site example - functionality
 
 	- navbar doesn't look the same when resolution is <=767px
 
-	- proper image resize at  on all resolution (section top-page)
-
-	- proper modal working when resolution is <= 767px (section pics-wrapper)
-
-	- need to fix date-of-submit & name-of-submiter (journal-section) when <=767px
-	(same with testimonail article, but with name & occupation of user)
+	- proper modal working when resolution is <= 767px (section pics-wrapper) - fix it via media
 
 	- glow when click on form (contact section)
 
-	- label proper alignment (contact section)
+	- label & asteriks proper alignment (contact section)
 */
 /*=============================================
 					Legend:
@@ -33,7 +25,6 @@
 		III: testimonals article
 	f: contact section
 4. footer
-5. blog
 =============================================*/
 
 
@@ -95,7 +86,7 @@ ul.nav.navbar-nav li a:hover {
 #bs-example-navbar-collapse-1 .navbar-nav>.active>a, 
 #bs-example-navbar-collapse-1 .navbar-nav>.active>a:focus, 
 #bs-example-navbar-collapse-1 .navbar-nav>.active>a:hover,
-li.active-elem, ul.nav.navbar-nav .active a {
+ul.nav.navbar-nav .active a {
 	background-color: #0f9095;
 }
 @media screen and (max-width: 767px) {
@@ -125,7 +116,10 @@ li.active-elem, ul.nav.navbar-nav .active a {
 /*-----------------------------  
 a: introduction section  
 ------------------------------*/
-.static-pic-on-page {
+.static-pic-below-navbar {
+	background-image: url('../images/post-image/post-image-a-972x360.jpg');
+	background-size: cover;
+	background-position: center;
 	height: 633px;
 	width: 100%;
 }
@@ -215,8 +209,26 @@ div.modal-footer a:hover {
 .custom-col-sm-2 a:hover {
 	text-decoration: none;
 }
+.custom-col-sm-2 a:hover p {
+	background-color: #11ABB0;
+	color: #fff;
+}
+.custom-col-sm-2 a:focus {
+	outline: none;
+	text-decoration: none;
+}
+.custom-col-sm-2 a p {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
 .custom-col-sm-2 {
 	font: 13px/24px 'Montserrat-Bold', sans-serif;
+}
+.custom-col-sm-2 a {
+	display: block;
 }
 .text-below-modal-img span {
 	margin-left: 15px;
@@ -259,9 +271,6 @@ div.modal-footer a:hover {
 }
 .para-text-modal-img {
 	margin-right: 40px;
-}
-.col-md-3.col-sm-3.custom-col-sm-2 {
-	margin: -10px 0;
 }
 .col-md-3.custom-col-sm-2.col-sm-4 {
 	margin: 15px 0;
@@ -338,6 +347,16 @@ d: journal section
 	}
 	.col-sm-9 .explanation-para-in-journal-sections a {
 		cursor: pointer;
+	}
+	.date-of-submit-post-journal, .name-of-submiter-journal {
+		display: inline;
+	}
+	.name-of-submiter-journal:before {
+		content:  '\00a0 /\00a0' ;
+	}
+	.align-text-journal {
+		text-align: center;
+		margin: 10px 0;
 	}
 }
 /*-----------------------------  
@@ -435,9 +454,19 @@ e: about us section
 	.portfolio-img-testimonial-article {
 		text-align: center;
 	}
+	.name-of-user, .user-occupation {
+		display: inline;
+	}
+	.user-occupation:before {
+		content:  '\00a0 /\00a0' ;
+	}
+	.align-text-testimonial {
+		text-align: center;
+		margin: 10px 0;
+	}
 }
 /*-----------------------------  
-a: contact section  
+f: contact section  
 ------------------------------*/
 section.contact-wrapper {
 	font-family: 'OpenSans-Regular', sans-serif;

@@ -1,18 +1,8 @@
 <!--
-
 	TODO:
-	- remove jumps when viewport changes (margins left & right is different at
-	all resolutions)
-
-	- proper page resize and proper alignment -> look at site example (viewport
-	is different at all resolutions)
-
 	- navbar doesn't look the same when resolution is <=767px
-	
-	- at section journal wrapper add proper href tag
 
  -->
-
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -21,7 +11,7 @@
 
     <!-- For non-zoooming mode -->
 	<meta name="viewport" content="width=device-width, initial-scale=1,
-	maximum-scale=1, user-scalable=no"> 
+	maximum-scale=1, user-scalable=no">
 	
 	<!-- Local fonts -->
 	<link rel="stylesheet" href="./style/fonts.css">
@@ -65,7 +55,7 @@
     		<!-- navbar -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     		  	<ul class="nav navbar-nav">
-    		  	  	<li class="active-elem"><a href="#top-page">Home</a></li>
+    		  	  	<li><a href="#top-page">Home</a></li>
     		  	  	<li><a href="#services-wrapper">Services</a></li>
     		  	  	<li><a href="#pic-wrapper">Portfolio</a></li>
     		  	  	<li><a href="#journal-wrapper">Journal</a></li>
@@ -87,10 +77,7 @@
   				<div class="introduction-part">
 
   			  		<div class="static-pic-below-navbar">
-  			  		  	<img src="./images/post-image/post-image-a-972x360.jpg" 
-  			  		  	alt="lion-statue-stone" class="img-responsive 
-  			  		  	static-pic-on-page">
-  			  		 </div>
+  			  		</div>
 
 					<!-- Controls left and right btn-->
   					<!-- <img src="./images/direction-nav-left.png" 
@@ -413,14 +400,14 @@
 					class="img-circle user-img-journal">
 				</div>
 				<div class="col-sm-9">
-					<a href="#">
+					<a href="blog.html">
 						<div class="anchor-tag-question-journal-section">
 							Proin gravida nibh vel velit auctor aliquet 
 							Aenean sollicitudin auctor.
 						</div>
 					</a> 
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-12 align-text-journal">
 					<p class="date-of-submit-post-journal">
 						AUG 19, 2045 
 					<p class="name-of-submiter-journal">
@@ -435,7 +422,7 @@
 						atque corrupti quos dolores et quas molestias excepturi 
 						sint occaecati cupiditate. At vero eos et accusamus et 
 						iusto odio dignissimos ducimus qui blanditiis 
-						praesentium. <a href="#">Read More ></a>
+						praesentium. <a href="blog-single.html">Read More ></a>
 					</p>
 				</div>
 			</div><!-- /div.row -->
@@ -447,14 +434,14 @@
 					user-img-journal" alt="portfolio picture woman">
 				</div>
 				<div class="col-sm-9">
-					<a href="#">
+					<a href="blog.html">
 						<div class="anchor-tag-question-journal-section">
 							Nemo enim ipsam voluptatem quia voluptas sit 
 							aspernatur aut odit aut fugit sed.
 						</div>
 					</a>  
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-12 align-text-journal">
 					<p class="date-of-submit-post-journal">
 						AUG 9, 2045 
 					<p class="name-of-submiter-journal">
@@ -470,7 +457,7 @@
 						molestias excepturi sint occaecati cupiditate. 
 						At vero eos et accusamus et iusto odio dignissimos 
 						ducimus qui blanditiis praesentium. 
-						<a href="#">Read More ></a>
+						<a href="blog-single.html">Read More ></a>
 					</p>
 				</div>
 			</div><!-- /div.row -->
@@ -482,14 +469,14 @@
 					class="img-circle user-img-journal">
 				</div>
 				<div class="col-sm-9">
-					<a href="#">
+					<a href="blog.html">
 						<div class="anchor-tag-question-journal-section">
 							Quis autem vel esse eum iure reprehenderit 
 							qui in ea voluptate velit esse.
 						</div>
 					</a> 
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-12 align-text-journal">
 					<p class="date-of-submit-post-journal">
 						AUG 7, 2045 
 					<p class="name-of-submiter-journal">
@@ -505,7 +492,7 @@
 						molestias excepturi sint occaecati cupiditate. 
 						At vero eos et accusamus et iusto odio dignissimos 
 						ducimus qui blanditiis praesentium. 
-						<a href="#">Read More ></a>
+						<a href="blog-single.html">Read More ></a>
 					</p>
 				</div>
 			</div><!-- /div.row -->
@@ -702,7 +689,7 @@
 							<img class="img-circle" 
 							src="./images/client-img.png" alt="portfolio img rounded">
 						</div>
-						<div class="col-sm-3">
+						<div class="col-sm-3 col-xs-12  align-text-testimonial">
 							<p class="name-of-user">John Doe</p>
 							<p class="user-occupation">Designer</p>
 						</div>
@@ -722,7 +709,7 @@
 							<img class="img-circle" 
 							src="./images/client-img.png" alt="portfolio img rounded">
 						</div>
-						<div class="col-sm-3">
+						<div class="col-sm-3 col-xs-12 align-text-testimonial">
 							<p class="name-of-user">Michael Smith</p>
 							<p class="user-occupation">CEO</p>
 						</div>
@@ -770,7 +757,7 @@
 						<div class="form-group">
 
 							<!-- Name in input form -->
-  						  	<label for="inputEmail3" 
+  						  	<label for="inputEmail1" 
   						  	class="col-sm-2 control-label">
   						  		Name 
   						  		<span class="style-asteriks-contact-section">
@@ -779,13 +766,13 @@
   						  	</label>
   						  	<div class="col-sm-10">
   						  	  	<input type="text" class="form-control input-lg" 
-  						  	  	id="inputEmail3">
+  						  	  	id="inputEmail1">
   						  	</div>
   						</div>
 
 						<!-- Email adress in input form -->
   						<div class="form-group">
-  						  	<label for="inputEmail3" 
+  						  	<label for="inputEmail2" 
   						  	class="col-sm-2 control-label">
   						  		Email 
   						  		<span class="style-asteriks-contact-section">
@@ -794,25 +781,25 @@
   						  	</label>
   						  	<div class="col-sm-10">
   						  	  	<input type="email" class="form-control input-lg" 
-  						  	  	id="inputEmail3">
+  						  	  	id="inputEmail2">
   						  	</div>
   						</div>
 
 						<!-- Subject of message in form -->
   						<div class="form-group">
-  						  	<label for="inputPassword3" 
+  						  	<label for="inputPassword1" 
   						  	class="col-sm-2 control-label">
   						  		Subject
   						  	</label>
   						  	<div class="col-sm-10">
   						  	  	<input type="text" class="form-control input-lg" 
-  						  	  	id="inputPassword3">
+  						  	  	id="inputPassword1">
   						  	</div>
   						</div>
 
   						<!-- Question itself in input form -->
   						<div class="form-group">
-  						  	<label for="inputPassword3" 
+  						  	<label for="inputPassword2" 
   						  	class="col-sm-2 control-label">
   						  		Message
   						  		<span class="style-asteriks-contact-section">
@@ -821,7 +808,7 @@
   						  	</label>
   						  	<div class="col-sm-10">
   						  	  	<textarea rows="20" class="form-control"
-  						  	  	id="inputPassword3" class="contact-textarea">
+  						  	  	id="inputPassword2" class="contact-textarea">
   						  	  		
   						  	  	</textarea>
   						  	</div>

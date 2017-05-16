@@ -1,26 +1,7 @@
 /**
-
 	TODO:
-	(napisao sam 819 na liniji 45 jer je 836px trazena rezolucija kada se menja
-	pozicija elementa, i ona (836) je manja za 17px(tako sam dobio 819) i tek 
-	tada dobijam da se viewport menja na 836px)
-
 	- add customize pin on gmaps.js
 
-	- when scroll down or up with mouse through page ( must lose focus on nav li 
-	(home)) i.e. lose it's class, function loseFocusOnActiveElem
-
-	- when click on img in pic-wrapper, then close the modal, focus is on the pic
-	and there is a text-decoration on anchor tag (section pics-wrapper)
-
-	- when click on text-below-modal-img there is no img in modal body (section
-	pics-wrapper)
-
-	- lines 76 - 79 at fnc modalLoader, need to change bck color & color of para
-	when hover over img (section pics-wrapper)
-
-	- proper modal working when resolution is <= 767px (section pics-wrapper)
-	
 	- when click on submit btn img loading is not loading (section contact)
  */
 
@@ -32,9 +13,6 @@ $(function () {
 
 	/*----------  for smooth scrolling  ----------*/
 	smoothScroolOnClick();
-
-	/*----------  for focusout on nav li elems  ----------*/
-	loseFocusOnActiveElem ();
 
 	/*----------  for loading modal pics  ----------*/
 	modalLoader();
@@ -72,18 +50,12 @@ $(function () {
 });
 function modalLoader () {
 
-	/*----------  add class of bck color to .text-below-modal-img  ----------*/
-	// $('img.img-responsive').hover(function() {
-	// 	$('.text-below-modal-img').removeClass('.text-below-modal-img')
-	// 	.addClass('.text-below-modal-img:hover');
-	// });
-
-	$('.pic-wrapper').on('click', 'img', function(){
+	$('.custom-col-sm-2').on('click', function(){
 
 		/*----------  for taking attr from img src & alt  ----------*/
-        var imgSrc = $(this).attr('src');
+        var imgSrc = $(this).find('img').attr('src');
         var modalsSrc = imgSrc.slice(0,18) + '/modals/m-' + imgSrc.slice(19);
-        var altSrc = $(this).attr('alt');
+        var altSrc = $(this).find('img').attr('alt');
 
         /*----------  for taking value & insert in modal body  ----------*/
         var headingAndBrand = imgSrc.slice(19);
@@ -175,18 +147,6 @@ function smoothScroolOnClick () {
       		}
     	}
   	});
-}
-function loseFocusOnActiveElem () {
-
-	/*----------  remove class from nav li (home) active elem when scroll ----------*/
-	$('.nav.navbar-nav li a').focusout(function() {
-		$('li.active-elem.').removeClass();
-	});
-
-	/*----------  remove class from nav li (home) active elem when click ----------*/
-	$('.nav.navbar-nav li a').click(function() {
-		$('li.active-elem').removeClass();
-	});
 }
 function addInteractiveContactSection () {
 
