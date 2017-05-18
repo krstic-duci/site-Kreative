@@ -107,6 +107,14 @@ div.col-sm-5.footer-anchors>a i:hover{
 		margin-left: 20px;
 	}
 }
+input:focus, textarea:focus {
+	background-color: #11abb0;
+	-moz-transition: background-color 0.15s ease-in-out;
+	-webkit-transition: background-color 0.15s ease-in-out;
+	-o-transition: background-color 0.15s ease-in-out;
+	-ms-transition: background-color 0.15s ease-in-out;
+	transition: background-color 0.15s linear;
+}
 /*=====  End of GENERAL STYLE   ======*/
 
 
