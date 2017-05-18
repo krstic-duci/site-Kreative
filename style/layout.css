@@ -4,16 +4,11 @@
 
 	- navbar doesn't look the same when resolution is <=767px
 
-	- proper modal working when resolution is <= 767px (section pics-wrapper) - 
-	fix it via media
-	
-	- name & occ in testimonail article need to be properly align when res is 
-	between 991px and 768px
-
 	- asteriks proper alignment when res is <= 1199px (contact section)
+	
+	- when res is <=513px textarea has scroll bar
 
-	- contact form proper alignment when res is between 1199px and 768px
-	(contact section)
+	- when click on submit btn img loading is not loading (section contact)
 */
 /*=============================================
 					Legend:
@@ -52,7 +47,7 @@ section h3, footer h3 {
 	.pic-wrapper .container, .journal-wrapper .container,
 	.about-us-wrapper .container, .contact-wrapper .container,
 	footer .container {
-		width: 64%;
+		width: 65%;
 	}
 	.intro-to-section, .h4-our-work-article,
 	.h4-meet-the-team-article, .h4-testimonials-article,
@@ -155,8 +150,8 @@ b: services section
 }
 .custom-col-sm i {
 	margin: 40px 5px 30px 0;
-    color: #c4c4c4;
-    font-size: 16px;
+  color: #c4c4c4;
+  font-size: 16px;
 }
 @media screen and (max-width: 767px) {
 	.services-wrapper {
@@ -177,16 +172,16 @@ div.modal-body.change-pic-in-modal {
 }
 div.modal-footer {
 	font: 11px/24px 'OpenSans-Regular', sans-serif;
-    background-color: #111;
-    padding: 25px;
-    text-align: left;
-    border: none;
-    letter-spacing: 3px;
+  background-color: #111;
+  padding: 25px;
+  text-align: left;
+  border: none;
+  letter-spacing: 3px;
 }
 div.modal-footer a {
 	margin: 0 23px 0 0;
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 div.modal-footer a:hover {
 	-webkit-transition: color 0.2s linear;
@@ -221,6 +216,8 @@ div.modal-footer a:hover {
 }
 .custom-col-sm-2 a p {
 	-webkit-transition: all 0.2s linear;
+	-o-
+	-ms-
 	transition: all 0.2s linear;
 }
 .custom-col-sm-2 {
@@ -238,8 +235,8 @@ div.modal-footer a:hover {
 	-o-box-shadow: 1px 1px 2px #ccc;
 	-ms-box-shadow: 1px 1px 2px #ccc;
 	box-shadow: 1px 1px 2px #ccc;
-    background-color: #ffffff;
-    line-height: 50px;
+  background-color: #ffffff;
+  line-height: 50px;
 }
 .text-below-modal-img:hover {
 	-webkit-transition: all 0.2s linear;
@@ -261,8 +258,8 @@ div.modal-footer a:hover {
 }
 .tag-text-modal-img {
 	margin-left: 5px;
-    font-size: 11px;
-    line-height: 24px;
+  font-size: 11px;
+  line-height: 24px;
 }
 .para-text-modal-img {
 	margin-right: 40px;
@@ -273,6 +270,23 @@ div.modal-footer a:hover {
 @media screen and (max-width: 767px) {
 	.pic-wrapper {
 		padding: 120px 0;
+	}
+	#myModal {
+		width: 80%;
+		margin: 0 auto;
+	}
+	div.modal-body.change-pic-in-modal img {
+		width: 100%;
+	}
+	.change-pic-in-modal h6 {
+		margin: 10px 0 8px 25px;
+	}
+	.change-pic-in-modal p {
+		margin: 0 0 10px 25px;
+  	color: #a1a1a1;
+	}
+	div.modal-footer {
+		padding: 10px 0 10px 25px;
 	}
 }
 /*-----------------------------  
@@ -401,12 +415,12 @@ e: about us section
 	font: 13px/18px 'OpenSans-Regular', sans-serif;
 	color: #969696;
 }
-.col-sm-3 a {
+.col-sm-3.team-members a {
 	margin-right: 15px;
 	text-decoration: none;
 	color: #969696;
 }
-.col-sm-3 a:hover {
+.col-sm-3.team-members a:hover {
 	text-decoration: none;
 	color: #0f9095;
 }
@@ -546,7 +560,7 @@ button.button-submit:hover {
 	border-color: #3F464B;
   color: #fff;
   box-shadow: none;
-  width: 81%;
+  width: 100%;
   margin-left: 15px;
 }
 .form-group label.control-label {
@@ -555,7 +569,10 @@ button.button-submit:hover {
 	font-family: 'OpenSans-Semibold', sans-serif;
 }
 .style-asteriks-contact-section {
-	margin-left: 5px;
+	margin-left: 3px;
+}
+.form-group label {
+	padding-right: 0;
 }
 label[for="inputText"] {
 	padding-right: 0;
@@ -570,7 +587,19 @@ input:focus, textarea:focus {
 }
 @media screen and (max-width: 767px) {
 	#inputName, #inputEmail, #inputPass, #inputText {
-		width: 100%;
+		width: 95%;
+	}
+	form.form-horizontal {
+		margin-bottom: 10px;
+	}  
+	div.col-sm-offset-1.col-sm-5 {
+		margin-bottom: 150px;
+	}
+	#inputName, #inputEmail, #inputPass, #inputText {
+		margin-left: 0;
+	}
+	button.button-submit  {
+		margin-left: 0;
 	}
 }
 /*===   End of MAIN CONTENT comment block  ===*/

@@ -2,20 +2,20 @@
 	TODO:
 	- add customize pin on gmaps.js
 
-	- when click on submit btn img loading is not loading (section contact)
+    - set caret position always at begining of textarea
  */
 
 
 $(function () {
-
-	/*----------  loading img when user click submit btn  ----------*/
-	addInteractiveContactSection();
 
 	/*----------  for smooth scrolling  ----------*/
 	smoothScroolOnClick();
 
 	/*----------  for loading modal pics  ----------*/
 	modalLoader();
+
+    /*----------  for loading Google geolocation  ----------*/
+    loadGeoLocation();
 
 	/*----------  put col & para on new lines ----------*/
 	$(window).resize(function() {
@@ -44,9 +44,6 @@ $(function () {
 			$('.custom-col-sm-4').removeClass('col-sm-6').addClass('col-sm-3');
 		}
 	});
-
-	/*----------  for loading Google geolocation  ----------*/
-	loadGeoLocation();
 });
 function modalLoader () {
 
@@ -147,16 +144,4 @@ function smoothScroolOnClick () {
       		}
     	}
   	});
-}
-function addInteractiveContactSection () {
-
-	/*----------  add img loading on click of a btn ----------*/
-	$('.button-submit').click(function() {
-		$('.fa.fa-spinner.fa-3x').css('display', 'inline');
-	});
-
-	/*----------  add color when user click inside form input & textarea ----------*/
-	$('.form-control').click(function() {
-		$(this).addClass('change-color-input-textarea');
-	});
 }
