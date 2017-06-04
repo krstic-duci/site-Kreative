@@ -1,13 +1,4 @@
-/**
-	TODO:
-	- when resolution is <=767px need to place correctly divs inside 
-	article first-user-review, second-user-review & third-user-review
-
-	- pagination on lower resolution
-
-	- problem with <li> <a> journal when it's come down to <= 767px
-/*
-=============================================
+/*=============================================
 					Legend:
 1. General style					
 2. Blog:
