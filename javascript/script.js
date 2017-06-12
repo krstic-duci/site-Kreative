@@ -104,6 +104,14 @@ $(function () {
         }
     }
 
+
+    function spinImage () {
+        $('.button-submit').click(function() {
+            $('.fa-spinner').addClass('fa-spin').css('display', 'inline');
+        });
+    }
+
+
 	/*----------  put col & para on new lines ----------*/
 	$(window).resize(function() {
 
@@ -141,4 +149,6 @@ $(function () {
     /*----------  for loading Google geolocation  ----------*/
     loadGeoLocation();
     
+    /*----- for adding image when click on submit btn -----*/
+    spinImage();
 });
