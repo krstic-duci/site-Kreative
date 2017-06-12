@@ -98,6 +98,15 @@ $(function () {
         lng: 121.051657,
         zoom: 15
       });
+
+      var m = Gmap.addMarker({
+        lat: 14.553304,
+        lng: 121.051657,
+        infoWindow: {
+          content: '<p>32nd St of South Cembo District, Philippines</p>'
+        }
+      });
+
       if(Gmap.map) {
         // Disabling mouse wheel scroll zooming
         Gmap.map.setOptions({ scrollwheel: false });
