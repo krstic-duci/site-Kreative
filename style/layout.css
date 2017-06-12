@@ -13,7 +13,7 @@
 		III: testimonals article
 	f: contact section
 4. footer
-5. reset values for smaller screens
+5. media-query
 =============================================*/
 
 
@@ -68,23 +68,6 @@ ul.nav.navbar-nav li a:hover {
 ul.nav.navbar-nav .active a {
 	background-color: #0f9095;
 }
-@media screen and (max-width: 767px) {
-	button.navbar-toggle.collapsed,
-	button.navbar-toggle.collapsed:hover {
-		background-color: #11ABB0;
-		border-radius: 0;
-		height: 50px;
-		margin: 0 14px;
-		width: 50px;
-	}
-	button.navbar-toggle.collapsed span.icon-bar {
-		height: 4px;
-    width: 27px;
-	}
-	button.navbar-toggle.collapsed span.icon-bar.style-icon-bar {
-		margin-top: 8px;
-	}
-}
 /*===  End of HEADER & NAV  ===*/
 
 
@@ -104,6 +87,74 @@ a: introduction section
 }
 .blue-words {
 	color: #11ABB0;
+}
+.introduction-part {
+	position: relative;
+}
+.second-text-to-swap, .control-text {
+	display: none;
+}
+.left-direction-arrow, .right-direction-arrow {
+	position: absolute;
+}
+.left-arrow-wrapper img {
+	margin: 22px 12px;
+}
+.right-arrow-wrapper img {
+	margin: 22px 15px;
+}
+.right-arrow-wrapper {
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	position: absolute;
+  background-color: #2D3339;
+  cursor: pointer;
+  height: 60px;
+  right: 0;
+  top: 50%;
+  transition: all 0.3s linear;
+  width: 40px;
+}
+.left-arrow-wrapper {
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	position: absolute;
+  background-color: #2D3339;
+  cursor: pointer;
+  height: 60px;
+  left: 0;
+  top: 50%;
+  transition: all 0.3s linear;
+  width: 40px;
+}
+.right-arrow-wrapper:hover , .left-arrow-wrapper:hover {
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	background-color: #11ABB0;
+	transition: all 0.3s linear;
+}
+.first-text-to-swap, .second-text-to-swap {
+	position: relative;
+	margin-top: -40%;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.first-text-to-swap h1, .second-text-to-swap h1 {
+	font: 56px/78px 'Montserrat-Regular', sans-serif;
+	color: #ffffff;
+}
+.first-text-to-swap p, .second-text-to-swap p {
+	font: 17px/36px 'OpenSans-Light', sans-serif;
+	color: #737e8c;
+}
+.second-text-to-swap h1 a:hover {
+	text-decoration: none;
 }
 /*-----------------------------  
 b: services section  
@@ -131,17 +182,6 @@ b: services section
 	margin: 40px 5px 30px 0;
   color: #c4c4c4;
   font-size: 16px;
-}
-@media screen and (max-width: 767px) {
-	.services-wrapper {
-		padding: 120px 0;
-	}
-}
-@media screen and (max-width: 836px) {
-	.explanation-para-in-service-section {
-		font-size: 18px;
-		margin: 20px 0 10px 0;
-	}
 }
 /*-----------------------------  
 c: images & modal section  
@@ -246,28 +286,6 @@ div.modal-footer a:hover {
 .col-md-3.custom-col-sm-2.col-sm-4 {
 	margin: 15px 0;
 }
-@media screen and (max-width: 767px) {
-	.pic-wrapper {
-		padding: 120px 0;
-	}
-	#myModal {
-		width: 80%;
-		margin: 0 auto;
-	}
-	div.modal-body.change-pic-in-modal img {
-		width: 100%;
-	}
-	.change-pic-in-modal h6 {
-		margin: 10px 0 8px 25px;
-	}
-	.change-pic-in-modal p {
-		margin: 0 0 10px 25px;
-  	color: #a1a1a1;
-	}
-	div.modal-footer {
-		padding: 10px 0 10px 25px;
-	}
-}
 /*-----------------------------  
 d: journal section  
 ------------------------------*/
@@ -317,33 +335,6 @@ d: journal section
 	text-decoration: none;
 	color: #005757;
 }
-@media screen and (max-width: 767px) {
-	.journal-wrapper {
-		padding: 120px 0;
-	}
-	.user-img-journal {
-		display: none;
-	}
-	.journal-wrapper .para-below-h3 {
-		margin-bottom: 50px;
-	}
-	div.anchor-tag-question-journal-section {
-		text-align: center;
-	}
-	.col-sm-9 .explanation-para-in-journal-sections a {
-		cursor: pointer;
-	}
-	.date-of-submit-post-journal, .name-of-submiter-journal {
-		display: inline;
-	}
-	.name-of-submiter-journal:before {
-		content:  '\00a0 /\00a0' ;
-	}
-	.align-text-journal {
-		text-align: center;
-		margin: 10px 0;
-	}
-}
 /*-----------------------------  
 e: about us section  
 ------------------------------*/
@@ -359,11 +350,6 @@ e: about us section
 	color: #a3a3a3;
 	font: 20px/36px 'OpenSans-Light', sans-serif;
 	margin: 15px 0 66px 0;
-}
-@media screen and (max-width: 767px) {
-	.about-us-wrapper {
-		padding: 120px 0;
-	}
 }
 /*____our work process article____*/
 .h4-our-work-article {
@@ -404,11 +390,7 @@ e: about us section
 	color: #0f9095;
 	text-decoration: none;
 }
-@media screen and (max-width: 767px) {
-	.team-members {
-		padding-bottom: 40px;
-	}
-}
+
 /*______testimonals article_______*/
 .h4-testimonials-article {
 	color: #0f9095;
@@ -432,24 +414,6 @@ e: about us section
 	color: #a3a3a3;
 	font: 18px/36px 'OpenSans-Light', sans-serif;
 	margin-top: 15px;
-}
-@media screen and (max-width: 767px) {
-	.h4-testimonials-article {
-		margin-top: 26px;
-	}
-	.portfolio-img-testimonial-article {
-		text-align: center;
-	}
-	.name-of-user, .user-occupation {
-		display: inline;
-	}
-	.user-occupation:before {
-		content:  '\00a0 /\00a0' ;
-	}
-	.align-text-testimonial {
-		text-align: center;
-		margin: 10px 0;
-	}
 }
 /*-----------------------------  
 f: contact section  
@@ -568,21 +532,6 @@ input:focus, textarea:focus {
 	background-color: #11abb0;
 	transition: background-color 0.15s linear;
 }
-@media screen and (max-width: 767px) {
-	#inputName, #inputEmail, #inputPass, #inputText {
-		width: 95%;
-	}
-	form.form-horizontal {
-		margin-bottom: 10px;
-	}  
-	div.col-sm-offset-1.col-sm-5 {
-		margin-bottom: 150px;
-	}
-	form.form-horizontal div.col-xs-offset-3, button.button-submit,
-	#inputName, #inputEmail, #inputPass, #inputText {
-		margin-left: 0;
-	}
-}
 /*===   End of MAIN CONTENT  ===*/
 
 
@@ -621,70 +570,242 @@ div.col-sm-6.footer-anchors {
 	color: #0B686B;
 	font-size: 18px;
 }
-@media screen and (max-width: 767px) {
-	div.col-sm-6.footer-anchors, div.col-sm-6 p.copyright-site {
-		text-align: center;
-	}
-}
 /*=====  End of FOOTER   =====*/
 
 
 /*=============================================
-5. RESET values for smaller screens
+5. MEDIA-QUERY values for smaller screens
 =============================================*/
-@media screen and (max-width: 1024px) {
-	.text-below-modal-img {
-		color: #ffffff;
-  	background-color: #11ABB0;
-	}
-	.journal-wrapper .col-sm-9 a {
-		text-decoration: underline;
-	}
-	.journal-wrapper .col-sm-9 a:hover,
-	.col-sm-9 .explanation-para-in-journal-sections a:hover {
-		color: #ffffff;
-		text-decoration: underline;
-	}
-	.col-sm-3.team-members a {
-		margin-right: 0;
-		font-size: 40px;
-	}
-	.col-sm-3.team-members a:hover {
-		color: #969696;
-	}
-	ul.nav.navbar-nav li a:hover {
-	color: #ffffff;	
-	}
-	button.button-submit:hover {
-		background-color: #11ABB0;
-		color: #ffffff;
-	}
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-	.col-sm-3.team-members a {
-		font-size: 28px;
-		margin-right: 3px;
+/* On lg screen position main heading and para in intro section */ /*1*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.first-text-to-swap, .second-text-to-swap {
+		margin-top: -45%;   /*1*/
+		margin-left: 50px;  /*1*/
+		margin-right: 50px; /*1*/
 	}	
 }
+/* Reset values so page can be more readable on screens <=1024px */ /*2*/
+@media screen and (max-width: 1024px) {
+	/* navigation */
+	ul.nav.navbar-nav li a:hover {
+		color: #ffffff;	            /*2*/
+	}
+	/* images & modal section */
+	.text-below-modal-img {
+		color: #ffffff;             /*2*/
+  	background-color: #11ABB0;  /*2*/
+	}
+	/* journal section */
+	.journal-wrapper .col-sm-9 a {
+		text-decoration: underline; /*2*/
+	}
+	/* journal section */
+	.journal-wrapper .col-sm-9 a:hover,
+	.col-sm-9 .explanation-para-in-journal-sections a:hover {
+		color: #ffffff;             /*2*/
+		text-decoration: underline; /*2*/
+	}
+	/* meet the team article */
+	.col-sm-3.team-members a {
+		margin-right: 0;           /*2*/
+		font-size: 40px;           /*2*/
+	}
+	/* meet the team article */
+	.col-sm-3.team-members a:hover {
+		color: #969696;            /*2*/
+	}
+	/* footer */
+	button.button-submit:hover {
+		background-color: #11ABB0; /*2*/
+		color: #ffffff;            /*2*/
+	}
+}
+/* On sm screen properly adjust margins and paddings  */ /*3*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	/* intro section */   
+	.first-text-to-swap, .second-text-to-swap {
+		margin-top: -65%;    /*3*/
+		margin-left: 50px;   /*3*/
+		margin-right: 50px;  /*3*/
+	}
+	/* meet the team article */ 
+	.col-sm-3.team-members a {
+		font-size: 28px;     /*3*/
+		margin-right: 3px;   /*3*/
+	}
+}
+/* On screen <=836px lower the font size and change margins */ /*4*/
+@media screen and (max-width: 836px) {
+	/* services section */
+	.explanation-para-in-service-section {
+		font-size: 18px;       /*4*/
+		margin: 20px 0 10px 0; /*4*/
+	}
+}
+/* On xs adjust elems to be consistent */ /*5*/
 @media screen and (max-width: 767px) {
+	/* style page to be have 80% width  */
 	.style-navbar .container, .services-wrapper .container, 
 	.pic-wrapper .container, .journal-wrapper .container,
 	.about-us-wrapper .container, .contact-wrapper .container,
 	footer .container {
-		width: 80%;
+		width: 80%;                 /*5*/
 	}
+	/* text aligned all headings */
 	.intro-to-section, .h4-our-work-article,
 	.h4-meet-the-team-article, .h4-testimonials-article,
 	.para-below-h4-testimonials {
-		text-align: center;
+		text-align: center;         /*5*/
 	}
-	.col-sm-3.team-members a {
-		font-size: 35px;
-		margin-right: 5px;
+	/* navigation */
+	button.navbar-toggle.collapsed,
+	button.navbar-toggle.collapsed:hover {
+		background-color: #11ABB0;  /*5*/
+		border-radius: 0;           /*5*/
+		height: 50px;               /*5*/
+		margin: 0 14px;             /*5*/
+		width: 50px;                /*5*/
+	}
+	button.navbar-toggle.collapsed span.icon-bar {
+		height: 4px;               /*5*/
+    width: 27px;               /*5*/
+	}
+	button.navbar-toggle.collapsed span.icon-bar.style-icon-bar {
+		margin-top: 8px;           /*5*/
+	}
+	/* services section */
+	.services-wrapper {
+		padding: 120px 0;          /*5*/
+	}
+	/* images modal section */
+	.pic-wrapper {
+		padding: 120px 0;          /*5*/
+	}
+	#myModal {
+		width: 80%;                /*5*/
+		margin: 0 auto;            /*5*/
+	}
+	div.modal-body.change-pic-in-modal img {
+		width: 100%;               /*5*/
+	}
+	.change-pic-in-modal h6 {
+		margin: 10px 0 8px 25px;   /*5*/
+	}
+	.change-pic-in-modal p {
+		margin: 0 0 10px 25px;     /*5*/
+  	color: #a1a1a1;            /*5*/
+	}
+	div.modal-footer {
+		padding: 10px 0 10px 25px; /*5*/
+	}
+	/* journal section */
+	.journal-wrapper {
+		padding: 120px 0;         /*5*/
+	}
+	.user-img-journal {
+		display: none;            /*5*/
+	}
+	.journal-wrapper .para-below-h3 {
+		margin-bottom: 50px;      /*5*/
 	}
 	div.anchor-tag-question-journal-section {
-		font-size: 20px;
-		line-height: 25px;
+		text-align: center;       /*5*/
+		font-size: 20px;          /*5*/
+		line-height: 25px;        /*5*/
+	}
+	.col-sm-9 .explanation-para-in-journal-sections a {
+		cursor: pointer;          /*5*/
+	}
+	.date-of-submit-post-journal, .name-of-submiter-journal {
+		display: inline;          /*5*/
+	}
+	.name-of-submiter-journal:before {
+		content:  '\00a0 /\00a0'; /*5*/
+	}
+	.align-text-journal {
+		text-align: center;       /*5*/
+		margin: 10px 0;           /*5*/
+	}
+	/* about us section */
+	.about-us-wrapper {
+		padding: 120px 0;         /*5*/
+	}
+	/* meet the team article */
+	.team-members {
+		padding-bottom: 40px;     /*5*/
+	}
+	.col-sm-3.team-members a {
+		font-size: 35px;         	/*5*/
+		margin-right: 5px;       	/*5*/
+	}
+	/* testimonies article */
+	.h4-testimonials-article {
+		margin-top: 26px;         /*5*/
+	}
+	.portfolio-img-testimonial-article {
+		text-align: center;       /*5*/
+	}
+	.name-of-user, .user-occupation {
+		display: inline;          /*5*/
+	}
+	.user-occupation:before {
+		content:  '\00a0 /\00a0'; /*5*/
+	}
+	.align-text-testimonial {
+		text-align: center;       /*5*/
+		margin: 10px 0;           /*5*/
+	}
+	/* contact section */
+	#inputName, #inputEmail, #inputPass, #inputText {
+		width: 95%;               /*5*/
+	}
+	form.form-horizontal {
+		margin-bottom: 10px;      /*5*/
+	}  
+	div.col-sm-offset-1.col-sm-5 {
+		margin-bottom: 150px;     /*5*/
+	}
+	form.form-horizontal div.col-xs-offset-3, button.button-submit,
+	#inputName, #inputEmail, #inputPass, #inputText {
+		margin-left: 0;          /*5*/
+	}
+	/* footer */
+	div.col-sm-6.footer-anchors, div.col-sm-6 p.copyright-site {
+		text-align: center;      /*5*/
 	}
 }
-/*=====  End of RESET   =====*/
+/* On these screen size place main heading and para correctly */ /*6*/
+@media screen and (min-width: 401px) and (max-width: 767px) {
+	/* intro section */
+	.first-text-to-swap h1, .second-text-to-swap h1 {
+		font-size: 40px;    /*6*/
+		line-height: 50px;  /*6*/
+	}
+	.first-text-to-swap p, .second-text-to-swap p {
+		font-size: 13px;    /*6*/
+		line-height: 30px;  /*6*/
+	}
+	.first-text-to-swap, .second-text-to-swap {
+		margin-top: -480px; /*6*/
+		margin-left: 50px;  /*6*/
+		margin-right: 50px; /*6*/
+	}
+}
+/* On these screen size place main heading and para correctly */ /*7*/
+@media screen and (min-width: 315px) and (max-width: 400px)  {
+	/* intro section */
+	.first-text-to-swap h1, .second-text-to-swap h1 {
+		font-size: 32px;    /*7*/
+		line-height: 40px;  /*7*/
+	}
+	.first-text-to-swap p, .second-text-to-swap p {
+		font-size: 12px;    /*7*/
+		line-height: 24px;  /*7*/
+	}
+	.first-text-to-swap, .second-text-to-swap {
+		margin-top: -520px; /*7*/
+		margin-left: 50px;  /*7*/
+		margin-right: 50px; /*7*/
+	}	
+}
+/*=====  End of MEDIA-QUERY   =====*/
