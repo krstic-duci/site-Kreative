@@ -2,10 +2,8 @@
 <html lang="en">  
 <head>  
 	<meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- For non-zoooming mode -->
-	<meta name="viewport" content="width=device-width, initial-scale=1,
-	maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Icon site on title -->
 	<link rel="shortcut icon" href="./images/favicon.ico" />	
 	<title>Kreative</title> 
@@ -16,8 +14,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="./libs/font-awesome-4.7.0/css/
-	font-awesome.min.css">
+	<link rel="stylesheet" href="./libs/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>  
 <body data-spy="scroll" data-target="#main-navbar">
 
@@ -349,7 +346,7 @@
 
 				<!-- Modal -->
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-				aria-labelledby="myModalLabel">
+				aria-labelledby="myModal">
 				  <div class="modal-dialog" role="document">
 				    <div class="modal-content">
 						<!-- Call JQ fnc modalLoader for img & text -->
@@ -401,9 +398,9 @@
 				<div class="col-sm-2 col-xs-12 align-text-journal">
 					<p class="date-of-submit-post-journal">
 						AUG 19, 2045 
-						<p class="name-of-submiter-journal">
-							By Sakura Haruno
-						</p>
+						<span>
+							<p class="name-of-submiter-journal">By Sakura Haruno</p>
+						</span>
 					</p>
 				</div>
 
@@ -438,9 +435,9 @@
 				<div class="col-sm-2 col-xs-12 align-text-journal">
 					<p class="date-of-submit-post-journal">
 						AUG 9, 2045 
-						<p class="name-of-submiter-journal">
-							By Jane Doe
-						</p>
+						<span>
+							<p class="name-of-submiter-journal">By Jane Doe</p>
+						</span>
 					</p>
 				</div>
 
@@ -476,9 +473,9 @@
 				<div class="col-sm-2 col-xs-12 align-text-journal">
 					<p class="date-of-submit-post-journal">
 						AUG 7, 2045 
-						<p class="name-of-submiter-journal">
-							By Naruto Uzumaki	
-						</p>
+						<span>
+							<p class="name-of-submiter-journal">By Naruto Uzumaki</p>	
+						</span>
 					</p>
 				</div>
 
@@ -805,8 +802,8 @@
   					  		</span>
   					  	</label>
   					  	<div class="col-sm-9">
-  					  	  <textarea rows="20" class="form-control" id="inputText" 
-  					  	  class="contact-textarea" required></textarea>
+  					  	  <textarea rows="20" class="form-control contact-textarea" 
+  					  	  id="inputText" required></textarea>
   					  	</div>
   					</div>
 
@@ -818,8 +815,8 @@
   					    </button>
   					  </div>
 							<div class="col-xs-6">
-								<i class="fa fa-spinner fa-4x" 
-  					    aria-hidden="true load-form-contact-section"></i>
+								<i class="fa fa-spinner fa-4x"
+								aria-hidden="true"></i> <!-- load-form-contact-section -->
 							</div>
   					</div>
 					</form>
