@@ -203,23 +203,9 @@ $(function () {
       $('.custom-col-sm-3').removeClass('col-sm-12').addClass('col-sm-9');
       $('.custom-col-sm-4').removeClass('col-sm-6').addClass('col-sm-3');
      }
-  }
-  breakpoints();
 
-
-  
-
-/*=====  End of Add breakpoints  ======*/
-  
-/*=======================================================
-=            Add left/right arrows in header            =
-=======================================================*/
-
-  function leftRightArrow() {
-    var $screenWidth = $(window).width();
-  
-    // When screen size iz <=1024px show control arrows in header
-    if ($screenWidth <= 1007) {
+    /*---- When screen size iz <=1024px show control arrows in header ----*/
+    if ($width <= 1007) {
       $('.control-text').show();
       $('.introduction-part').mouseleave(function() {
         $('.control-text').show();
@@ -231,17 +217,12 @@ $(function () {
       });
     }
   }
-  leftRightArrow();
-/*=====  End of Add left/right arrows in header  ======*/
-
-/*========================================================================
-=            Load fnc breakpoints and leftRightArrow on rezie            =
-=========================================================================*/
+  breakpoints();
 
   $(window).resize(function() {
     breakpoints();
-    leftRightArrow();
   });
+  
 
-/*=====  End of Load fnc breakpoints and leftRightArrow on rezie  ======*/
+/*=====  End of Add breakpoints  ======*/
 });
